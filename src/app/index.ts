@@ -6,6 +6,6 @@ export const createApp = (): HTMLDivElement => {
   const app: HTMLDivElement = document.createElement("div");
 
   app.className = "app";
-  app.append(createHeader(), createHero(), createCarousel(),);
+  app.append(createHeader(), createHero(), createCarousel());
   return app;
 };
