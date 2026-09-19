@@ -3,6 +3,15 @@
 $game-card-info-threshold: 288px;
 $game-card-border-width: 2.5px;
 
+$game-card-content-info-threshold: $game-card-info-threshold - 2 *
+  $game-card-border-width;
+
+$game-card-overlay-padding: tokens.$size-2;
+$game-card-overlay-gap: tokens.$size-1;
+
+$game-card-title-line-height: 1.2;
+$game-card-stat-line-height: 1;
+
 .game-card {
   container-type: inline-size;
 
@@ -12,13 +21,33 @@ $game-card-border-width: 2.5px;
   overflow: hidden;
 
   background-color: tokens.$white;
+  border: $game-card-border-width solid tokens.$on-primary;
   border-radius: tokens.$corner-extra-large;
+  box-shadow: tokens.$level-1;
 
-  box-shadow:
-    inset 0 0 0 $game-card-border-width tokens.$on-primary,
-    tokens.$level-1;
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 56px;
+
+    background: linear-gradient(
+      to bottom,
+      rgba(tokens.$black, 0) 0%,
+      rgba(tokens.$black, 0.4) 17.3%,
+      rgba(tokens.$black, 0.85) 46.15%,
+      rgba(tokens.$black, 0.85) 100%
+    );
+
+    content: "";
+    pointer-events: none;
+  }
 
   &__image {
+    display: block;
+
     width: 100%;
     height: 100%;
 
@@ -30,6 +59,7 @@ $game-card-border-width: 2.5px;
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 1;
 
     display: none;
     flex-direction: column;
@@ -38,13 +68,6 @@ $game-card-border-width: 2.5px;
     padding: tokens.$size-2;
 
     color: tokens.$white;
-
-    background: linear-gradient(
-      to bottom,
-      transparent,
-      rgba(tokens.$black, 0.4),
-      rgba(tokens.$black, 0.85)
-    );
   }
 
   &__title {
@@ -53,7 +76,7 @@ $game-card-border-width: 2.5px;
 
     font-size: tokens.$body-large;
     font-weight: tokens.$bold;
-    line-height: normal;
+    line-height: $game-card-title-line-height;
 
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -62,7 +85,6 @@ $game-card-border-width: 2.5px;
   &__stats {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 
     width: 100%;
   }
@@ -74,12 +96,18 @@ $game-card-border-width: 2.5px;
 
     font-size: tokens.$body-medium;
     font-weight: tokens.$bold;
-    line-height: normal;
+    line-height: $game-card-stat-line-height;
 
     white-space: nowrap;
   }
 
+  &__stat:last-child {
+    margin-left: auto;
+  }
+
   &__stat-icon {
+    display: block;
+
     width: tokens.$size-3;
     height: tokens.$size-3;
 
@@ -87,11 +115,12 @@ $game-card-border-width: 2.5px;
   }
 
   &__stat-value {
-    display: inline-block;
+    display: block;
+    line-height: $game-card-stat-line-height;
   }
 }
 
-@container (min-width: #{$game-card-info-threshold}) {
+@container (min-width: #{$game-card-content-info-threshold}) {
   .game-card__overlay {
     display: flex;
   }

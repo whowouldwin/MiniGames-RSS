@@ -1,8 +1,6 @@
 @use "../../styles/mixins";
 @use "../../styles/tokens";
 
-$carousel-card-border-width: 2.5px;
-
 $carousel-desktop-side: 120fr;
 $carousel-desktop-medium: 288fr;
 $carousel-desktop-main: 816fr;
@@ -10,8 +8,21 @@ $carousel-desktop-main: 816fr;
 $carousel-tablet-side: 104fr;
 $carousel-tablet-main: 448fr;
 
-$carousel-mobile-side: 56fr;
-$carousel-mobile-main: 218fr;
+$carousel-mobile-side: 56px;
+$carousel-mobile-main: 218px;
+
+$carousel-desktop-track-height: 388px;
+$carousel-desktop-card-height: 384px;
+
+$carousel-tablet-track-height: 288px;
+$carousel-tablet-card-height: 280px;
+
+$carousel-mobile-track-height: 206px;
+$carousel-mobile-card-height: 200px;
+
+$carousel-accent-border-width: 1.5px;
+
+$carousel-mobile-track-extra-width: 6px;
 
 .carousel {
   display: flex;
@@ -26,12 +37,16 @@ $carousel-mobile-main: 218fr;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    width: 100%;
   }
 
   &__heading {
     display: flex;
     align-items: center;
     gap: tokens.$size-1;
+
+    min-width: 0;
   }
 
   &__accent {
@@ -41,7 +56,7 @@ $carousel-mobile-main: 218fr;
     flex-shrink: 0;
 
     background-color: tokens.$primary;
-    border: 1.5px solid tokens.$on-primary;
+    border: $carousel-accent-border-width solid tokens.$on-primary;
     border-radius: tokens.$corner-extra-small;
   }
 
@@ -53,11 +68,15 @@ $carousel-mobile-main: 218fr;
     font-size: tokens.$headline-large;
     font-weight: tokens.$bold;
     line-height: normal;
+
+    white-space: nowrap;
   }
 
   &__navigation {
     display: flex;
     gap: tokens.$size-2;
+
+    flex-shrink: 0;
   }
 
   &__navigation-button {
@@ -92,12 +111,17 @@ $carousel-mobile-main: 218fr;
   }
 
   &__navigation-icon {
-    width: tokens.$size-3;
-    height: tokens.$size-3;
+    display: block;
+
+    width: tokens.$size-2;
+    height: tokens.$size-2;
+
+    flex-shrink: 0;
   }
 
   &__track {
     display: grid;
+
     grid-template-columns:
       $carousel-desktop-side
       $carousel-desktop-medium
@@ -105,10 +129,10 @@ $carousel-mobile-main: 218fr;
       $carousel-desktop-medium
       $carousel-desktop-side;
 
-    justify-content: space-between;
     gap: tokens.$size-1;
 
-    height: 388px;
+    width: 100%;
+    height: $carousel-desktop-track-height;
     padding-inline: tokens.$size-1;
 
     overflow: hidden;
@@ -116,7 +140,7 @@ $carousel-mobile-main: 218fr;
 
   .game-card {
     min-width: 0;
-    height: 384px;
+    height: $carousel-desktop-card-height;
   }
 
   @include mixins.compact-desktop {
@@ -145,11 +169,11 @@ $carousel-mobile-main: 218fr;
         $carousel-tablet-main
         $carousel-tablet-side;
 
-      height: 288px;
+      height: $carousel-tablet-track-height;
     }
 
     .game-card {
-      height: 280px;
+      height: $carousel-tablet-card-height;
     }
 
     .game-card:nth-child(1),
@@ -173,14 +197,17 @@ $carousel-mobile-main: 218fr;
         $carousel-mobile-main
         $carousel-mobile-side;
 
-      gap: 0;
+      justify-content: space-between;
 
-      height: 206px;
+      width: calc(100% + $carousel-mobile-track-extra-width);
+      height: $carousel-mobile-track-height;
+
+      gap: 0;
       padding-inline: tokens.$size-05;
     }
 
     .game-card {
-      height: 200px;
+      height: $carousel-mobile-card-height;
     }
   }
 }
