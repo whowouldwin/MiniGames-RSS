@@ -29,8 +29,8 @@
 ## Adaptive Layout: Home Page — 130 points
 
 - [x] **RSS-QS-1-4-1** — Header for unauthenticated user (15 points)
-- [ ] **RSS-QS-1-4-2** — Mobile burger menu (25 points)
-- [ ] **RSS-QS-1-4-3** — Hero section (15 points)
+- [x] **RSS-QS-1-4-2** — Mobile burger menu (25 points)
+- [x] **RSS-QS-1-4-3** — Hero section (15 points)
 - [ ] **RSS-QS-1-4-4** — Carousel / Slider section (25 points)
 - [ ] **RSS-QS-1-4-5** — Leaderboard table (15 points)
 - [ ] **RSS-QS-1-4-6** — "Are You a Game Developer?" section (15 points)
