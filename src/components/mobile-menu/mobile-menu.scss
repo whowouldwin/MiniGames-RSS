@@ -122,7 +122,7 @@
     height: 100dvh;
     min-height: 0;
     overflow-y: auto;
-    transform: translateY(-tokens.$size-3);
+    transform: translateY(calc(-1 * tokens.$size-3));
     &--open {
       transform: translateY(0);
     }
