@@ -1,8 +1,8 @@
 # Story 1 verification
 
-Source implementation verified on 20 September 2026 with Node.js 24.19.0 and Google Chrome 153.0.8010.48.
+Target deployment verified on 20 September 2026 with Node.js 24.19.0 and Google Chrome 153.0.8010.48.
 
-This prepared implementation was transferred into MiniGames-RSS. The results below initially describe source verification; fresh target deployment verification will be recorded after publication.
+This prepared implementation was transferred into MiniGames-RSS. The published [target application](https://whowouldwin.github.io/MiniGames-RSS/) was freshly checked on 20 September 2026 after [successful deployment](https://github.com/whowouldwin/MiniGames-RSS/actions/runs/35509770662). Screenshots below were captured from that target deployment. The application source tree is unchanged from the completed source implementation; deployment paths and repository links were adapted.
 
 ## Acceptance matrix
 
@@ -47,11 +47,12 @@ Self-assessment: **294 / 294**. The final score is determined by cross-check rev
 - Mobile menu: full-screen size, own close button and Escape pass.
 - Zero JavaScript page/console errors in the final browser run.
 - Production DOM snapshots submitted to the W3C Nu HTML Checker: Home, Login, Register and mobile menu each return an empty messages array. Development-only Vite style injection is not part of the production HTML.
+- Reduced-motion and touch-context checks pass: keyboard tab switching, no-reload submission, restored trigger focus and menu focus loop.
 - Pre-push regression: a failing ESLint process with a successful following formatter still aborts the hook.
 
 ## Visual comparison
 
-Figma renders and browser screenshots were compared at 100% scale using image overlays at 375, 768 and 1920px. Table column coordinates match the reference. Major section boundaries differ by roughly 0–5px; the assignment permits 10px. This describes the inspected layouts, not a claim that every raster pixel is identical. Font rasterization varies by platform.
+Source Figma overlays were reviewed at 375, 768 and 1920px. Fresh target screenshots were compared side by side with the same Figma renders at these widths; the measured target page heights are listed below. Table column coordinates match the reference. Major section boundaries differ by roughly 0–5px; the assignment permits 10px. This describes the inspected layouts, not a claim that every raster pixel is identical. Font rasterization varies by platform.
 
 | Width | Figma page height | Browser page height |
 | ----- | ----------------: | ------------------: |

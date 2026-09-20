@@ -1,0 +1,1570 @@
+{
+  "browser": "153.0.8010.48",
+  "results": [
+    {
+      "width": 375,
+      "scroll": 375,
+      "appWidth": 375,
+      "appLeft": 0,
+      "brokenImages": 0,
+      "cards": [
+        {
+          "width": 56,
+          "overlay": "none"
+        },
+        {
+          "width": 218,
+          "overlay": "none"
+        },
+        {
+          "width": 56,
+          "overlay": "none"
+        }
+      ],
+      "sections": [
+        {
+          "name": "header",
+          "y": 0,
+          "height": 64
+        },
+        {
+          "name": "hero",
+          "y": 64,
+          "height": 330.1875
+        },
+        {
+          "name": "carousel",
+          "y": 394.1875,
+          "height": 283
+        },
+        {
+          "name": "leaderboard",
+          "y": 677.1875,
+          "height": 293.59375
+        },
+        {
+          "name": "game-dev",
+          "y": 970.78125,
+          "height": 565.59375
+        },
+        {
+          "name": "footer",
+          "y": 1536.375,
+          "height": 526.359375
+        }
+      ],
+      "tableCells": [
+        {
+          "text": "#1",
+          "x": 32,
+          "width": 40
+        },
+        {
+          "text": "APAlex_Pro99",
+          "x": 80,
+          "width": 97
+        },
+        {
+          "text": "94,25094.2K",
+          "x": 185,
+          "width": 80
+        },
+        {
+          "text": "\ud83d\udd25 12 daysd",
+          "x": 273,
+          "width": 70
+        }
+      ]
+    },
+    {
+      "width": 376,
+      "scroll": 376,
+      "appWidth": 376,
+      "appLeft": 0,
+      "brokenImages": 0,
+      "cards": [
+        {
+          "width": 41.84375,
+          "overlay": "none"
+        },
+        {
+          "width": 180.296875,
+          "overlay": "none"
+        },
+        {
+          "width": 41.84375,
+          "overlay": "none"
+        }
+      ],
+      "sections": [
+        {
+          "name": "header",
+          "y": 0,
+          "height": 72
+        },
+        {
+          "name": "hero",
+          "y": 72,
+          "height": 463.546875
+        },
+        {
+          "name": "carousel",
+          "y": 535.546875,
+          "height": 400
+        },
+        {
+          "name": "leaderboard",
+          "y": 935.546875,
+          "height": 293.59375
+        },
+        {
+          "name": "game-dev",
+          "y": 1229.140625,
+          "height": 734.59375
+        },
+        {
+          "name": "footer",
+          "y": 1963.734375,
+          "height": 526.359375
+        }
+      ],
+      "tableCells": [
+        {
+          "text": "#1",
+          "x": 32,
+          "width": 40
+        },
+        {
+          "text": "APAlex_Pro99",
+          "x": 80,
+          "width": 98
+        },
+        {
+          "text": "94,25094.2K",
+          "x": 186,
+          "width": 80
+        },
+        {
+          "text": "\ud83d\udd25 12 daysd",
+          "x": 274,
+          "width": 70
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "scroll": 390,
+      "appWidth": 390,
+      "appLeft": 0,
+      "brokenImages": 0,
+      "cards": [
+        {
+          "width": 44.0625,
+          "overlay": "none"
+        },
+        {
+          "width": 189.859375,
+          "overlay": "none"
+        },
+        {
+          "width": 44.078125,
+          "overlay": "none"
+        }
+      ],
+      "sections": [
+        {
+          "name": "header",
+          "y": 0,
+          "height": 72
+        },
+        {
+          "name": "hero",
+          "y": 72,
+          "height": 463.546875
+        },
+        {
+          "name": "carousel",
+          "y": 535.546875,
+          "height": 400
+        },
+        {
+          "name": "leaderboard",
+          "y": 935.546875,
+          "height": 293.59375
+        },
+        {
+          "name": "game-dev",
+          "y": 1229.140625,
+          "height": 734.59375
+        },
+        {
+          "name": "footer",
+          "y": 1963.734375,
+          "height": 526.359375
+        }
+      ],
+      "tableCells": [
+        {
+          "text": "#1",
+          "x": 32,
+          "width": 40
+        },
+        {
+          "text": "APAlex_Pro99",
+          "x": 80,
+          "width": 112
+        },
+        {
+          "text": "94,25094.2K",
+          "x": 200,
+          "width": 80
+        },
+        {
+          "text": "\ud83d\udd25 12 daysd",
+          "x": 288,
+          "width": 70
+        }
+      ]
+    },
+    {
+      "width": 430,
+      "scroll": 430,
+      "appWidth": 430,
+      "appLeft": 0,
+      "brokenImages": 0,
+      "cards": [
+        {
+          "width": 50.40625,
+          "overlay": "none"
+        },
+        {
+          "width": 217.171875,
+          "overlay": "none"
+        },
+        {
+          "width": 50.421875,
+          "overlay": "none"
+        }
+      ],
+      "sections": [
+        {
+          "name": "header",
+          "y": 0,
+          "height": 72
+        },
+        {
+          "name": "hero",
+          "y": 72,
+          "height": 443.953125
+        },
+        {
+          "name": "carousel",
+          "y": 515.953125,
+          "height": 400
+        },
+        {
+          "name": "leaderboard",
+          "y": 915.953125,
+          "height": 293.59375
+        },
+        {
+          "name": "game-dev",
+          "y": 1209.546875,
+          "height": 698.59375
+        },
+        {
+          "name": "footer",
+          "y": 1908.140625,
+          "height": 526.359375
+        }
+      ],
+      "tableCells": [
+        {
+          "text": "#1",
+          "x": 32,
+          "width": 40
+        },
+        {
+          "text": "APAlex_Pro99",
+          "x": 80,
+          "width": 152
+        },
+        {
+          "text": "94,25094.2K",
+          "x": 240,
+          "width": 80
+        },
+        {
+          "text": "\ud83d\udd25 12 daysd",
+          "x": 328,
+          "width": 70
+        }
+      ]
+    },
+    {
+      "width": 600,
+      "scroll": 600,
+      "appWidth": 600,
+      "appLeft": 0,
+      "brokenImages": 0,
+      "cards": [
+        {
+          "width": 77.359375,
+          "overlay": "none"
+        },
+        {
+          "width": 333.265625,
+          "overlay": "flex"
+        },
+        {
+          "width": 77.375,
+          "overlay": "none"
+        }
+      ],
+      "sections": [
+        {
+          "name": "header",
+          "y": 0,
+          "height": 72
+        },
+        {
+          "name": "hero",
+          "y": 72,
+          "height": 382.96875
+        },
+        {
+          "name": "carousel",
+          "y": 454.96875,
+          "height": 400
+        },
+        {
+          "name": "leaderboard",
+          "y": 854.96875,
+          "height": 293.59375
+        },
+        {
+          "name": "game-dev",
+          "y": 1148.5625,
+          "height": 627.796875
+        },
+        {
+          "name": "footer",
+          "y": 1776.359375,
+          "height": 505.359375
+        }
+      ],
+      "tableCells": [
+        {
+          "text": "#1",
+          "x": 32,
+          "width": 40
+        },
+        {
+          "text": "APAlex_Pro99",
+          "x": 80,
+          "width": 322
+        },
+        {
+          "text": "94,25094.2K",
+          "x": 410,
+          "width": 80
+        },
+        {
+          "text": "\ud83d\udd25 12 daysd",
+          "x": 498,
+          "width": 70
+        }
+      ]
+    },
+    {
+      "width": 647,
+      "scroll": 647,
+      "appWidth": 647,
+      "appLeft": 0,
+      "brokenImages": 0,
+      "cards": [
+        {
+          "width": 84.8125,
+          "overlay": "none"
+        },
+        {
+          "width": 365.359375,
+          "overlay": "flex"
+        },
+        {
+          "width": 84.8125,
+          "overlay": "none"
+        }
+      ],
+      "sections": [
+        {
+          "name": "header",
+          "y": 0,
+          "height": 72
+        },
+        {
+          "name": "hero",
+          "y": 72,
+          "height": 382.96875
+        },
+        {
+          "name": "carousel",
+          "y": 454.96875,
+          "height": 400
+        },
+        {
+          "name": "leaderboard",
+          "y": 854.96875,
+          "height": 293.59375
+        },
+        {
+          "name": "game-dev",
+          "y": 1148.5625,
+          "height": 627.796875
+        },
+        {
+          "name": "footer",
+          "y": 1776.359375,
+          "height": 505.359375
+        }
+      ],
+      "tableCells": [
+        {
+          "text": "#1",
+          "x": 32,
+          "width": 40
+        },
+        {
+          "text": "APAlex_Pro99",
+          "x": 80,
+          "width": 369
+        },
+        {
+          "text": "94,25094.2K",
+          "x": 457,
+          "width": 80
+        },
+        {
+          "text": "\ud83d\udd25 12 daysd",
+          "x": 545,
+          "width": 70
+        }
+      ]
+    },
+    {
+      "width": 648,
+      "scroll": 648,
+      "appWidth": 648,
+      "appLeft": 0,
+      "brokenImages": 0,
+      "cards": [
+        {
+          "width": 84.96875,
+          "overlay": "none"
+        },
+        {
+          "width": 366.046875,
+          "overlay": "flex"
+        },
+        {
+          "width": 84.96875,
+          "overlay": "none"
+        }
+      ],
+      "sections": [
+        {
+          "name": "header",
+          "y": 0,
+          "height": 72
+        },
+        {
+          "name": "hero",
+          "y": 72,
+          "height": 382.96875
+        },
+        {
+          "name": "carousel",
+          "y": 454.96875,
+          "height": 400
+        },
+        {
+          "name": "leaderboard",
+          "y": 854.96875,
+          "height": 293.59375
+        },
+        {
+          "name": "game-dev",
+          "y": 1148.5625,
+          "height": 627.796875
+        },
+        {
+          "name": "footer",
+          "y": 1776.359375,
+          "height": 505.359375
+        }
+      ],
+      "tableCells": [
+        {
+          "text": "#1",
+          "x": 32,
+          "width": 40
+        },
+        {
+          "text": "APAlex_Pro99",
+          "x": 80,
+          "width": 370
+        },
+        {
+          "text": "94,25094.2K",
+          "x": 458,
+          "width": 80
+        },
+        {
+          "text": "\ud83d\udd25 12 daysd",
+          "x": 546,
+          "width": 70
+        }
+      ]
+    },
+    {
+      "width": 767,
+      "scroll": 767,
+      "appWidth": 767,
+      "appLeft": 0,
+      "brokenImages": 0,
+      "cards": [
+        {
+          "width": 103.828125,
+          "overlay": "none"
+        },
+        {
+          "width": 447.328125,
+          "overlay": "flex"
+        },
+        {
+          "width": 103.84375,
+          "overlay": "none"
+        }
+      ],
+      "sections": [
+        {
+          "name": "header",
+          "y": 0,
+          "height": 72
+        },
+        {
+          "name": "hero",
+          "y": 72,
+          "height": 382.96875
+        },
+        {
+          "name": "carousel",
+          "y": 454.96875,
+          "height": 400
+        },
+        {
+          "name": "leaderboard",
+          "y": 854.96875,
+          "height": 329.59375
+        },
+        {
+          "name": "game-dev",
+          "y": 1184.5625,
+          "height": 627.796875
+        },
+        {
+          "name": "footer",
+          "y": 1812.359375,
+          "height": 429.375
+        }
+      ],
+      "tableCells": [
+        {
+          "text": "#1",
+          "x": 56,
+          "width": 80
+        },
+        {
+          "text": "APAlex_Pro99",
+          "x": 152,
+          "width": 160
+        },
+        {
+          "text": "142",
+          "x": 328,
+          "width": 110
+        },
+        {
+          "text": "94,25094.2K",
+          "x": 454,
+          "width": 110
+        },
+        {
+          "text": "\ud83d\udd25 12 daysd",
+          "x": 580,
+          "width": 110
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "scroll": 768,
+      "appWidth": 768,
+      "appLeft": 0,
+      "brokenImages": 0,
+      "cards": [
+        {
+          "width": 104,
+          "overlay": "none"
+        },
+        {
+          "width": 448,
+          "overlay": "flex"
+        },
+        {
+          "width": 104,
+          "overlay": "none"
+        }
+      ],
+      "sections": [
+        {
+          "name": "header",
+          "y": 0,
+          "height": 72
+        },
+        {
+          "name": "hero",
+          "y": 72,
+          "height": 382.96875
+        },
+        {
+          "name": "carousel",
+          "y": 454.96875,
+          "height": 400
+        },
+        {
+          "name": "leaderboard",
+          "y": 854.96875,
+          "height": 329.59375
+        },
+        {
+          "name": "game-dev",
+          "y": 1184.5625,
+          "height": 627.796875
+        },
+        {
+          "name": "footer",
+          "y": 1812.359375,
+          "height": 429.375
+        }
+      ],
+      "tableCells": [
+        {
+          "text": "#1",
+          "x": 56,
+          "width": 80
+        },
+        {
+          "text": "APAlex_Pro99",
+          "x": 152,
+          "width": 160
+        },
+        {
+          "text": "142",
+          "x": 328,
+          "width": 110
+        },
+        {
+          "text": "94,25094.2K",
+          "x": 454,
+          "width": 110
+        },
+        {
+          "text": "\ud83d\udd25 12 daysd",
+          "x": 580,
+          "width": 110
+        }
+      ]
+    },
+    {
+      "width": 769,
+      "scroll": 769,
+      "appWidth": 769,
+      "appLeft": 0,
+      "brokenImages": 0,
+      "cards": [
+        {
+          "width": 47.125,
+          "overlay": "none"
+        },
+        {
+          "width": 113.125,
+          "overlay": "none"
+        },
+        {
+          "width": 320.5,
+          "overlay": "flex"
+        },
+        {
+          "width": 113.109375,
+          "overlay": "none"
+        },
+        {
+          "width": 47.125,
+          "overlay": "none"
+        }
+      ],
+      "sections": [
+        {
+          "name": "header",
+          "y": 0,
+          "height": 81
+        },
+        {
+          "name": "hero",
+          "y": 81,
+          "height": 382.96875
+        },
+        {
+          "name": "carousel",
+          "y": 463.96875,
+          "height": 500
+        },
+        {
+          "name": "leaderboard",
+          "y": 963.96875,
+          "height": 329.59375
+        },
+        {
+          "name": "game-dev",
+          "y": 1293.5625,
+          "height": 627.796875
+        },
+        {
+          "name": "footer",
+          "y": 1921.359375,
+          "height": 429.375
+        }
+      ],
+      "tableCells": [
+        {
+          "text": "#1",
+          "x": 56,
+          "width": 80
+        },
+        {
+          "text": "APAlex_Pro99",
+          "x": 152,
+          "width": 160
+        },
+        {
+          "text": "142",
+          "x": 328,
+          "width": 110
+        },
+        {
+          "text": "94,25094.2K",
+          "x": 454,
+          "width": 110
+        },
+        {
+          "text": "\ud83d\udd25 12 daysd",
+          "x": 580,
+          "width": 110
+        }
+      ]
+    },
+    {
+      "width": 820,
+      "scroll": 820,
+      "appWidth": 820,
+      "appLeft": 0,
+      "brokenImages": 0,
+      "cards": [
+        {
+          "width": 50.875,
+          "overlay": "none"
+        },
+        {
+          "width": 122.125,
+          "overlay": "none"
+        },
+        {
+          "width": 346,
+          "overlay": "flex"
+        },
+        {
+          "width": 122.109375,
+          "overlay": "none"
+        },
+        {
+          "width": 50.875,
+          "overlay": "none"
+        }
+      ],
+      "sections": [
+        {
+          "name": "header",
+          "y": 0,
+          "height": 81
+        },
+        {
+          "name": "hero",
+          "y": 81,
+          "height": 382.96875
+        },
+        {
+          "name": "carousel",
+          "y": 463.96875,
+          "height": 500
+        },
+        {
+          "name": "leaderboard",
+          "y": 963.96875,
+          "height": 329.59375
+        },
+        {
+          "name": "game-dev",
+          "y": 1293.5625,
+          "height": 627.796875
+        },
+        {
+          "name": "footer",
+          "y": 1921.359375,
+          "height": 429.375
+        }
+      ],
+      "tableCells": [
+        {
+          "text": "#1",
+          "x": 56,
+          "width": 80
+        },
+        {
+          "text": "APAlex_Pro99",
+          "x": 152,
+          "width": 160
+        },
+        {
+          "text": "142",
+          "x": 328,
+          "width": 110
+        },
+        {
+          "text": "94,25094.2K",
+          "x": 454,
+          "width": 110
+        },
+        {
+          "text": "\ud83d\udd25 12 daysd",
+          "x": 580,
+          "width": 110
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "scroll": 1024,
+      "appWidth": 1024,
+      "appLeft": 0,
+      "brokenImages": 0,
+      "cards": [
+        {
+          "width": 65.875,
+          "overlay": "none"
+        },
+        {
+          "width": 158.125,
+          "overlay": "none"
+        },
+        {
+          "width": 448,
+          "overlay": "flex"
+        },
+        {
+          "width": 158.109375,
+          "overlay": "none"
+        },
+        {
+          "width": 65.890625,
+          "overlay": "none"
+        }
+      ],
+      "sections": [
+        {
+          "name": "header",
+          "y": 0,
+          "height": 81
+        },
+        {
+          "name": "hero",
+          "y": 81,
+          "height": 382.96875
+        },
+        {
+          "name": "carousel",
+          "y": 463.96875,
+          "height": 500
+        },
+        {
+          "name": "leaderboard",
+          "y": 963.96875,
+          "height": 329.59375
+        },
+        {
+          "name": "game-dev",
+          "y": 1293.5625,
+          "height": 627.796875
+        },
+        {
+          "name": "footer",
+          "y": 1921.359375,
+          "height": 408.375
+        }
+      ],
+      "tableCells": [
+        {
+          "text": "#1",
+          "x": 56,
+          "width": 80
+        },
+        {
+          "text": "APAlex_Pro99",
+          "x": 152,
+          "width": 160
+        },
+        {
+          "text": "142",
+          "x": 328,
+          "width": 110
+        },
+        {
+          "text": "94,25094.2K",
+          "x": 454,
+          "width": 110
+        },
+        {
+          "text": "\ud83d\udd25 12 daysd",
+          "x": 580,
+          "width": 110
+        }
+      ]
+    },
+    {
+      "width": 1025,
+      "scroll": 1025,
+      "appWidth": 1025,
+      "appLeft": 0,
+      "brokenImages": 0,
+      "cards": [
+        {
+          "width": 54.1875,
+          "overlay": "none"
+        },
+        {
+          "width": 130.0625,
+          "overlay": "none"
+        },
+        {
+          "width": 368.5,
+          "overlay": "flex"
+        },
+        {
+          "width": 130.046875,
+          "overlay": "none"
+        },
+        {
+          "width": 54.203125,
+          "overlay": "none"
+        }
+      ],
+      "sections": [
+        {
+          "name": "header",
+          "y": 0,
+          "height": 85
+        },
+        {
+          "name": "hero",
+          "y": 85,
+          "height": 625.1875
+        },
+        {
+          "name": "carousel",
+          "y": 710.1875,
+          "height": 556
+        },
+        {
+          "name": "leaderboard",
+          "y": 1266.1875,
+          "height": 604.765625
+        },
+        {
+          "name": "game-dev",
+          "y": 1870.953125,
+          "height": 560
+        },
+        {
+          "name": "footer",
+          "y": 2430.953125,
+          "height": 376.96875
+        }
+      ],
+      "tableCells": [
+        {
+          "text": "#1",
+          "x": 144,
+          "width": 80
+        },
+        {
+          "text": "APAlex_Pro99",
+          "x": 240,
+          "width": 115.390625
+        },
+        {
+          "text": "142",
+          "x": 371.390625,
+          "width": 115.40625
+        },
+        {
+          "text": "94,25094.2K",
+          "x": 502.796875,
+          "width": 115.390625
+        },
+        {
+          "text": "\ud83d\udd25 12 daysd",
+          "x": 634.1875,
+          "width": 115.40625
+        },
+        {
+          "text": "Heartopia",
+          "x": 765.59375,
+          "width": 115.40625
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "scroll": 1280,
+      "appWidth": 1280,
+      "appLeft": 0,
+      "brokenImages": 0,
+      "cards": [
+        {
+          "width": 72.9375,
+          "overlay": "none"
+        },
+        {
+          "width": 175.0625,
+          "overlay": "none"
+        },
+        {
+          "width": 496,
+          "overlay": "flex"
+        },
+        {
+          "width": 175.046875,
+          "overlay": "none"
+        },
+        {
+          "width": 72.953125,
+          "overlay": "none"
+        }
+      ],
+      "sections": [
+        {
+          "name": "header",
+          "y": 0,
+          "height": 85
+        },
+        {
+          "name": "hero",
+          "y": 85,
+          "height": 625.1875
+        },
+        {
+          "name": "carousel",
+          "y": 710.1875,
+          "height": 556
+        },
+        {
+          "name": "leaderboard",
+          "y": 1266.1875,
+          "height": 585.578125
+        },
+        {
+          "name": "game-dev",
+          "y": 1851.765625,
+          "height": 560
+        },
+        {
+          "name": "footer",
+          "y": 2411.765625,
+          "height": 343.375
+        }
+      ],
+      "tableCells": [
+        {
+          "text": "#1",
+          "x": 144,
+          "width": 80
+        },
+        {
+          "text": "APAlex_Pro99",
+          "x": 240,
+          "width": 166.390625
+        },
+        {
+          "text": "142",
+          "x": 422.390625,
+          "width": 166.40625
+        },
+        {
+          "text": "94,25094.2K",
+          "x": 604.796875,
+          "width": 166.390625
+        },
+        {
+          "text": "\ud83d\udd25 12 daysd",
+          "x": 787.1875,
+          "width": 166.40625
+        },
+        {
+          "text": "Heartopia",
+          "x": 969.59375,
+          "width": 166.390625
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "scroll": 1440,
+      "appWidth": 1440,
+      "appLeft": 0,
+      "brokenImages": 0,
+      "cards": [
+        {
+          "width": 84.703125,
+          "overlay": "none"
+        },
+        {
+          "width": 203.296875,
+          "overlay": "none"
+        },
+        {
+          "width": 576,
+          "overlay": "flex"
+        },
+        {
+          "width": 203.28125,
+          "overlay": "none"
+        },
+        {
+          "width": 84.71875,
+          "overlay": "none"
+        }
+      ],
+      "sections": [
+        {
+          "name": "header",
+          "y": 0,
+          "height": 85
+        },
+        {
+          "name": "hero",
+          "y": 85,
+          "height": 625.1875
+        },
+        {
+          "name": "carousel",
+          "y": 710.1875,
+          "height": 556
+        },
+        {
+          "name": "leaderboard",
+          "y": 1266.1875,
+          "height": 585.578125
+        },
+        {
+          "name": "game-dev",
+          "y": 1851.765625,
+          "height": 560
+        },
+        {
+          "name": "footer",
+          "y": 2411.765625,
+          "height": 343.375
+        }
+      ],
+      "tableCells": [
+        {
+          "text": "#1",
+          "x": 144,
+          "width": 80
+        },
+        {
+          "text": "APAlex_Pro99",
+          "x": 240,
+          "width": 198.390625
+        },
+        {
+          "text": "142",
+          "x": 454.390625,
+          "width": 198.40625
+        },
+        {
+          "text": "94,25094.2K",
+          "x": 668.796875,
+          "width": 198.390625
+        },
+        {
+          "text": "\ud83d\udd25 12 daysd",
+          "x": 883.1875,
+          "width": 198.40625
+        },
+        {
+          "text": "Heartopia",
+          "x": 1097.59375,
+          "width": 198.390625
+        }
+      ]
+    },
+    {
+      "width": 1920,
+      "scroll": 1920,
+      "appWidth": 1920,
+      "appLeft": 0,
+      "brokenImages": 0,
+      "cards": [
+        {
+          "width": 120,
+          "overlay": "none"
+        },
+        {
+          "width": 288,
+          "overlay": "flex"
+        },
+        {
+          "width": 816,
+          "overlay": "flex"
+        },
+        {
+          "width": 288,
+          "overlay": "flex"
+        },
+        {
+          "width": 120,
+          "overlay": "none"
+        }
+      ],
+      "sections": [
+        {
+          "name": "header",
+          "y": 0,
+          "height": 85
+        },
+        {
+          "name": "hero",
+          "y": 85,
+          "height": 625.1875
+        },
+        {
+          "name": "carousel",
+          "y": 710.1875,
+          "height": 556
+        },
+        {
+          "name": "leaderboard",
+          "y": 1266.1875,
+          "height": 585.578125
+        },
+        {
+          "name": "game-dev",
+          "y": 1851.765625,
+          "height": 560
+        },
+        {
+          "name": "footer",
+          "y": 2411.765625,
+          "height": 343.375
+        }
+      ],
+      "tableCells": [
+        {
+          "text": "#1",
+          "x": 144,
+          "width": 80
+        },
+        {
+          "text": "APAlex_Pro99",
+          "x": 240,
+          "width": 294.390625
+        },
+        {
+          "text": "142",
+          "x": 550.390625,
+          "width": 294.40625
+        },
+        {
+          "text": "94,25094.2K",
+          "x": 860.796875,
+          "width": 294.390625
+        },
+        {
+          "text": "\ud83d\udd25 12 daysd",
+          "x": 1171.1875,
+          "width": 294.40625
+        },
+        {
+          "text": "Heartopia",
+          "x": 1481.59375,
+          "width": 294.390625
+        }
+      ]
+    },
+    {
+      "width": 1921,
+      "scroll": 1921,
+      "appWidth": 1920,
+      "appLeft": 0.5,
+      "brokenImages": 0,
+      "cards": [
+        {
+          "width": 120,
+          "overlay": "none"
+        },
+        {
+          "width": 288,
+          "overlay": "flex"
+        },
+        {
+          "width": 816,
+          "overlay": "flex"
+        },
+        {
+          "width": 288,
+          "overlay": "flex"
+        },
+        {
+          "width": 120,
+          "overlay": "none"
+        }
+      ],
+      "sections": [
+        {
+          "name": "header",
+          "y": 0,
+          "height": 85
+        },
+        {
+          "name": "hero",
+          "y": 85,
+          "height": 625.1875
+        },
+        {
+          "name": "carousel",
+          "y": 710.1875,
+          "height": 556
+        },
+        {
+          "name": "leaderboard",
+          "y": 1266.1875,
+          "height": 585.578125
+        },
+        {
+          "name": "game-dev",
+          "y": 1851.765625,
+          "height": 560
+        },
+        {
+          "name": "footer",
+          "y": 2411.765625,
+          "height": 343.375
+        }
+      ],
+      "tableCells": [
+        {
+          "text": "#1",
+          "x": 144.5,
+          "width": 80
+        },
+        {
+          "text": "APAlex_Pro99",
+          "x": 240.5,
+          "width": 294.390625
+        },
+        {
+          "text": "142",
+          "x": 550.890625,
+          "width": 294.40625
+        },
+        {
+          "text": "94,25094.2K",
+          "x": 861.296875,
+          "width": 294.390625
+        },
+        {
+          "text": "\ud83d\udd25 12 daysd",
+          "x": 1171.6875,
+          "width": 294.40625
+        },
+        {
+          "text": "Heartopia",
+          "x": 1482.09375,
+          "width": 294.390625
+        }
+      ]
+    },
+    {
+      "width": 2560,
+      "scroll": 2560,
+      "appWidth": 1920,
+      "appLeft": 320,
+      "brokenImages": 0,
+      "cards": [
+        {
+          "width": 120,
+          "overlay": "none"
+        },
+        {
+          "width": 288,
+          "overlay": "flex"
+        },
+        {
+          "width": 816,
+          "overlay": "flex"
+        },
+        {
+          "width": 288,
+          "overlay": "flex"
+        },
+        {
+          "width": 120,
+          "overlay": "none"
+        }
+      ],
+      "sections": [
+        {
+          "name": "header",
+          "y": 0,
+          "height": 85
+        },
+        {
+          "name": "hero",
+          "y": 85,
+          "height": 625.1875
+        },
+        {
+          "name": "carousel",
+          "y": 710.1875,
+          "height": 556
+        },
+        {
+          "name": "leaderboard",
+          "y": 1266.1875,
+          "height": 585.578125
+        },
+        {
+          "name": "game-dev",
+          "y": 1851.765625,
+          "height": 560
+        },
+        {
+          "name": "footer",
+          "y": 2411.765625,
+          "height": 343.375
+        }
+      ],
+      "tableCells": [
+        {
+          "text": "#1",
+          "x": 464,
+          "width": 80
+        },
+        {
+          "text": "APAlex_Pro99",
+          "x": 560,
+          "width": 294.390625
+        },
+        {
+          "text": "142",
+          "x": 870.390625,
+          "width": 294.40625
+        },
+        {
+          "text": "94,25094.2K",
+          "x": 1180.796875,
+          "width": 294.390625
+        },
+        {
+          "text": "\ud83d\udd25 12 daysd",
+          "x": 1491.1875,
+          "width": 294.40625
+        },
+        {
+          "text": "Heartopia",
+          "x": 1801.59375,
+          "width": 294.390625
+        }
+      ]
+    },
+    {
+      "auth": "login",
+      "width": 1920,
+      "height": 1080,
+      "pass": true
+    },
+    {
+      "auth": "register",
+      "width": 1920,
+      "height": 1080,
+      "pass": true
+    },
+    {
+      "auth": "login",
+      "width": 768,
+      "height": 1024,
+      "pass": true
+    },
+    {
+      "auth": "register",
+      "width": 768,
+      "height": 1024,
+      "pass": true
+    },
+    {
+      "auth": "login",
+      "width": 375,
+      "height": 900,
+      "pass": true
+    },
+    {
+      "auth": "register",
+      "width": 375,
+      "height": 900,
+      "pass": true
+    },
+    {
+      "auth": "login",
+      "width": 375,
+      "height": 500,
+      "pass": true
+    },
+    {
+      "auth": "register",
+      "width": 375,
+      "height": 500,
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "deployment": "https://whowouldwin.github.io/MiniGames-RSS/",
+  "deploymentRun": 35509770662,
+  "htmlValidation": {
+    "auth-login.validation": [],
+    "menu.validation": [],
+    "home.validation": [],
+    "auth-register.validation": []
+  },
+  "additionalInteractions": "Reduced motion, touch context, keyboard tab switching, form no-reload, focus restore and menu focus loop passed."
+}
