@@ -43,7 +43,10 @@ $mobile-score-width: 72px;
     width: 100%;
     table-layout: fixed;
     border-collapse: collapse;
-    font: tokens.$medium tokens.$body-medium / $line-height tokens.$Roboto;
+    font-family: tokens.$Roboto;
+    font-size: tokens.$body-medium;
+    font-weight: tokens.$medium;
+    line-height: $line-height;
     color: tokens.$on-primary;
   }
   th {
