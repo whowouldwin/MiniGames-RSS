@@ -1,0 +1,138 @@
+@use "../../styles/tokens";
+@use "../../styles/mixins";
+
+$game-card-info-threshold: 288px;
+$game-card-border-width: 2.5px;
+
+$game-card-content-info-threshold: $game-card-info-threshold - 2 *
+  $game-card-border-width;
+
+$game-card-overlay-padding: tokens.$size-2;
+$game-card-overlay-gap: tokens.$size-1;
+
+$game-card-title-line-height: 1.2;
+$game-card-stat-line-height: 1;
+
+$game-card-overlay-middle-stop: 17.308%;
+$game-card-overlay-dark-stop: 46.154%;
+
+$game-card-overlay-gradient: linear-gradient(
+  to bottom,
+  transparent,
+  rgba(tokens.$black, 0.4) $game-card-overlay-middle-stop,
+  rgba(tokens.$black, 0.85) $game-card-overlay-dark-stop
+);
+
+.game-card {
+  container-type: inline-size;
+
+  position: relative;
+  isolation: isolate;
+
+  height: 100%;
+  overflow: hidden;
+
+  background-color: tokens.$white;
+  border: $game-card-border-width solid tokens.$on-primary;
+  border-radius: tokens.$corner-extra-large;
+  box-shadow: tokens.$level-1;
+
+  &__image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+  &__shade {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: tokens.$size-7;
+    pointer-events: none;
+    background: $game-card-overlay-gradient;
+
+    @include mixins.mobile {
+      display: none;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    display: none;
+    flex-direction: column;
+    gap: tokens.$size-1;
+
+    padding: tokens.$size-2;
+
+    color: tokens.$white;
+    background: $game-card-overlay-gradient;
+  }
+
+  &__title {
+    margin: 0;
+    overflow: hidden;
+
+    font-size: tokens.$body-large;
+    font-weight: tokens.$bold;
+    line-height: $game-card-title-line-height;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__stats {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+  }
+
+  &__stat {
+    display: flex;
+    align-items: center;
+    gap: tokens.$size-05;
+
+    font-size: tokens.$body-medium;
+    font-weight: tokens.$bold;
+    line-height: $game-card-stat-line-height;
+
+    white-space: nowrap;
+  }
+
+  &__stat:last-child {
+    margin-left: auto;
+  }
+
+  &__stat-icon {
+    display: block;
+
+    width: tokens.$size-3;
+    height: tokens.$size-3;
+
+    flex-shrink: 0;
+  }
+
+  &__stat-value {
+    display: block;
+    line-height: $game-card-stat-line-height;
+  }
+}
+
+@container (min-width: #{$game-card-content-info-threshold}) {
+  .game-card__shade {
+    display: none;
+  }
+
+  .game-card__overlay {
+    display: flex;
+  }
+}

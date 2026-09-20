@@ -1,0 +1,4 @@
+set -e
+
+npx eslint . --max-warnings=0
+npx prettier . --check

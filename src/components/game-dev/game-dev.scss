@@ -1,0 +1,122 @@
+@use "../../styles/tokens";
+@use "../../styles/mixins";
+
+$illustration-width: 680px;
+$illustration-height: 480px;
+$illustration-tablet-height: 300px;
+$illustration-mobile-height: 227px;
+$title-leading: 1.2;
+$body-leading: 1.5;
+$card-shadow:
+  0 2px 4px rgba(tokens.$black, 0.04),
+  0 14px 15px rgba(tokens.$black, 0.08);
+$button-shadow: 0 10px 10px rgba(tokens.$black, 0.1);
+
+.game-dev {
+  display: flex;
+  align-items: center;
+  gap: tokens.$size-5;
+  padding: tokens.$size-5 tokens.$size-15;
+  background: tokens.$bg;
+  &__illustration {
+    width: min(41%, $illustration-width);
+    height: $illustration-height;
+    object-fit: cover;
+    border-radius: tokens.$corner-extra-large;
+  }
+  &__card {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: tokens.$size-3;
+    padding: tokens.$size-5;
+    border-radius: tokens.$corner-extra-large;
+    background: tokens.$white;
+    box-shadow:
+      inset 0 0 0 tokens.$border-width-medium tokens.$on-primary,
+      $card-shadow;
+  }
+  h2 {
+    margin: 0;
+    color: tokens.$on-primary;
+    font-size: tokens.$headline-large;
+    line-height: $title-leading;
+  }
+  p {
+    margin: 0;
+  }
+  &__description {
+    font-size: tokens.$body-large;
+    line-height: $body-leading;
+  }
+  &__contact {
+    font-size: tokens.$body-small;
+    color: tokens.$on-bg-low;
+    overflow-wrap: anywhere;
+  }
+  &__button {
+    gap: tokens.$size-1;
+    font-family: tokens.$Roboto;
+    font-size: tokens.$body-large;
+    border-radius: tokens.$corner-medium;
+    box-shadow:
+      inset 0 0 0 tokens.$border-width-medium tokens.$on-primary,
+      $button-shadow;
+    img {
+      width: tokens.$size-3;
+      height: tokens.$size-3;
+    }
+  }
+  @include mixins.compact-desktop {
+    flex-direction: column;
+    gap: tokens.$size-3;
+    padding: tokens.$size-3 tokens.$size-5;
+    &__illustration {
+      width: 100%;
+      height: $illustration-tablet-height;
+    }
+    &__card {
+      width: 100%;
+      gap: tokens.$size-2;
+      padding: tokens.$size-4;
+    }
+    h2 {
+      font-size: tokens.$headline-medium;
+    }
+    &__description {
+      font-size: tokens.$body-small;
+    }
+    &__contact {
+      font-size: tokens.$label-medium;
+    }
+    &__button {
+      padding: tokens.$btn-medium-y tokens.$btn-medium-x;
+      font-family: tokens.$Inter;
+      font-size: tokens.$body-small;
+      img {
+        width: tokens.$size-2;
+        height: tokens.$size-2;
+      }
+    }
+  }
+  @include mixins.mobile {
+    gap: tokens.$size-2;
+    padding: tokens.$size-2;
+    &__illustration {
+      height: $illustration-mobile-height;
+    }
+    &__card {
+      padding: tokens.$size-3;
+    }
+    &__description {
+      font-size: tokens.$label-medium;
+    }
+    &__button {
+      padding: tokens.$btn-small-y tokens.$btn-small-x;
+      font-family: tokens.$Roboto;
+      font-size: tokens.$label-medium;
+    }
+  }
+}

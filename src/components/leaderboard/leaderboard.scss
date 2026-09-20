@@ -1,0 +1,286 @@
+@use "../../styles/tokens";
+@use "../../styles/mixins";
+
+$line-height: 1.2;
+$border: 2.5px;
+$thin-border: 1px;
+$accent-border: 1.5px;
+$rank-width: 104px;
+$mobile-rank-width: 48px;
+$mobile-score-width: 72px;
+$tablet-data-width: 110px;
+$mobile-streak-width: 70px;
+
+.leaderboard {
+  padding: tokens.$size-5 tokens.$size-15;
+  background: tokens.$bg;
+  &__title {
+    display: flex;
+    align-items: center;
+    margin: 0 0 tokens.$size-5;
+    color: tokens.$on-primary;
+    font-size: tokens.$headline-large;
+    line-height: $line-height;
+    &::before {
+      content: "";
+      width: tokens.$size-1;
+      height: tokens.$size-4;
+      margin-right: tokens.$size-1;
+      background: tokens.$primary;
+      border: $accent-border solid tokens.$on-primary;
+      border-radius: tokens.$corner-extra-small;
+    }
+  }
+  &__title-extra {
+    white-space: pre;
+  }
+  &__frame {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border: $border solid tokens.$on-primary;
+      border-radius: inherit;
+      pointer-events: none;
+    }
+    overflow: hidden;
+    border-radius: tokens.$corner-large;
+    box-shadow:
+      inset 0 0 0 $border tokens.$on-primary,
+      tokens.$level-1;
+  }
+  &__table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-family: tokens.$Roboto;
+    font-size: tokens.$body-medium;
+    font-weight: tokens.$medium;
+    line-height: $line-height;
+    color: tokens.$on-primary;
+  }
+  th {
+    padding: tokens.$size-3 tokens.$size-1;
+    background: tokens.$tertiary;
+    color: tokens.$white;
+    text-transform: uppercase;
+    font-weight: tokens.$extra-bold;
+  }
+  td {
+    height: tokens.$size-9;
+    padding: calc(tokens.$size-2 - $thin-border) tokens.$size-1;
+    text-align: center;
+    border-bottom: $thin-border solid tokens.$outline;
+  }
+  th:first-child,
+  td:first-child {
+    width: $rank-width;
+    font-weight: tokens.$extra-bold;
+  }
+  tbody tr:nth-child(even) {
+    background: tokens.$white;
+  }
+  tbody tr:first-child td:first-child {
+    color: tokens.$primary-high;
+  }
+  tbody tr:last-child td {
+    border-bottom: 0;
+  }
+  &__player {
+    display: flex;
+    align-items: center;
+    gap: tokens.$corner-medium;
+  }
+  &__name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  &__avatar {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: tokens.$size-5;
+    height: tokens.$size-5;
+    border: $thin-border solid tokens.$on-primary;
+    border-radius: tokens.$corner-full;
+    font-size: tokens.$body-small;
+    font-weight: tokens.$bold;
+  }
+  @each $rank,
+    $color
+      in (
+        1: tokens.$primary,
+        2: tokens.$avatar-random-2,
+        3: tokens.$avatar-random-3,
+        4: tokens.$avatar-random-4,
+        5: tokens.$avatar-random-5
+      )
+  {
+    &__avatar--#{$rank} {
+      background: $color;
+    }
+  }
+  &__badge {
+    display: inline-block;
+    padding: tokens.$size-05 tokens.$corner-medium;
+    border: $accent-border solid tokens.$on-primary;
+    border-radius: tokens.$corner-full;
+    font-size: tokens.$label-medium;
+    font-weight: tokens.$bold;
+  }
+  &__compact,
+  &__compact-score {
+    display: none;
+  }
+  @include mixins.compact-desktop {
+    padding: tokens.$size-3 tokens.$size-5;
+    &__title {
+      margin-bottom: tokens.$size-3;
+      font-size: tokens.$headline-medium;
+      &::before {
+        height: tokens.$size-3;
+      }
+    }
+    &__table {
+      font-size: tokens.$body-small;
+    }
+    &__favorite,
+    &__desktop {
+      display: none;
+    }
+    &__compact {
+      display: inline;
+    }
+    tbody tr:nth-child(n + 4) {
+      display: none;
+    }
+    th {
+      padding-block: tokens.$size-2;
+    }
+    td {
+      height: tokens.$size-8 - tokens.$size-05;
+    }
+    &__avatar {
+      width: tokens.$size-4 - tokens.$size-05;
+      height: tokens.$size-4 - tokens.$size-05;
+      font-size: tokens.$label-medium;
+    }
+    th:nth-child(2) {
+      width: 28%;
+    }
+    tbody tr:first-child td:first-child {
+      color: tokens.$tertiary;
+    }
+  }
+  @media (max-width: tokens.$breakpoint-tablet - tokens.$size-15) {
+    padding: tokens.$size-2;
+    &__title {
+      margin-bottom: tokens.$size-2;
+    }
+    &__title-extra,
+    &__games,
+    &__full-score {
+      display: none;
+    }
+    &__compact-score {
+      display: inline;
+    }
+    th:first-child,
+    td:first-child {
+      width: $mobile-rank-width;
+    }
+    th:nth-child(2) {
+      width: auto;
+    }
+    th:nth-child(4),
+    th:nth-child(5) {
+      width: $mobile-score-width;
+    }
+    td {
+      height: tokens.$size-7;
+      padding: calc(tokens.$size-2 - $thin-border) tokens.$size-05;
+    }
+    &__player {
+      gap: tokens.$size-05;
+    }
+    &__avatar {
+      width: tokens.$size-3;
+      height: tokens.$size-3;
+      font-size: tokens.$label-small;
+    }
+  }
+}
+
+// Figma uses different column gaps in the heading and player rows.
+// Keep semantic table markup while matching those independent grid tracks.
+.leaderboard {
+  &__table,
+  thead,
+  tbody {
+    display: block;
+  }
+  tr {
+    display: grid;
+    grid-template-columns: tokens.$size-10 repeat(5, minmax(0, 1fr));
+    align-items: center;
+    gap: tokens.$size-2;
+    padding: tokens.$size-2 tokens.$size-3;
+  }
+  thead tr {
+    padding-block: tokens.$size-3;
+    background: tokens.$tertiary;
+  }
+  th,
+  td {
+    width: auto !important;
+    min-width: 0;
+    height: auto;
+    padding: 0;
+    border: 0;
+  }
+  tbody tr {
+    box-shadow: inset 0 (-$thin-border) tokens.$outline;
+  }
+  &__badge {
+    line-height: normal;
+  }
+  @include mixins.compact-desktop {
+    tr {
+      grid-template-columns: tokens.$size-10 (tokens.$size-10 * 2) repeat(
+          3,
+          minmax(0, $tablet-data-width)
+        );
+      padding: tokens.$size-2;
+    }
+    thead tr {
+      gap: tokens.$corner-medium;
+      padding-block: tokens.$size-2;
+    }
+    &__player {
+      gap: tokens.$size-1;
+    }
+    &__avatar {
+      font-size: tokens.$label-medium;
+    }
+  }
+  @media (max-width: tokens.$breakpoint-tablet - tokens.$size-15) {
+    tr {
+      grid-template-columns:
+        tokens.$size-5 minmax(0, 1fr)
+        tokens.$size-10 $mobile-streak-width;
+      gap: tokens.$size-1;
+    }
+    thead tr {
+      gap: tokens.$size-1;
+    }
+    &__player {
+      gap: tokens.$size-1 - tokens.$border-width-medium;
+    }
+    &__name {
+      font-size: tokens.$body-small;
+    }
+  }
+}

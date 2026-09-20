@@ -1,0 +1,83 @@
+@use "../../styles/mixins";
+@use "../../styles/tokens";
+
+.header {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-inline: tokens.$size-10;
+  padding-block: tokens.$size-3;
+
+  background-color: tokens.$bg;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: tokens.$border-width-medium;
+
+    background-color: tokens.$on-primary;
+
+    content: "";
+    pointer-events: none;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: tokens.$size-4;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: tokens.$size-2;
+  }
+
+  @include mixins.compact-desktop {
+    padding-inline: tokens.$size-4;
+
+    &__actions {
+      gap: tokens.$size-2;
+    }
+
+    &__login-button,
+    &__signup-button {
+      padding: tokens.$btn-small-y tokens.$btn-small-x;
+    }
+  }
+
+  @include mixins.tablet {
+    height: tokens.$size-9;
+
+    padding-inline: tokens.$size-5;
+    padding-block: tokens.$size-2;
+
+    &__actions {
+      gap: tokens.$size-2;
+    }
+
+    &__login-button {
+      display: none;
+    }
+
+    &__signup-button {
+      padding: tokens.$btn-small-y tokens.$btn-small-x;
+    }
+  }
+
+  @include mixins.mobile {
+    height: auto;
+
+    padding-inline: tokens.$size-2;
+
+    &__buttons {
+      display: none;
+    }
+  }
+}
