@@ -1,0 +1,213 @@
+@use "../../styles/mixins";
+@use "../../styles/tokens";
+
+$carousel-desktop-side: 120fr;
+$carousel-desktop-medium: 288fr;
+$carousel-desktop-main: 816fr;
+
+$carousel-tablet-side: 104fr;
+$carousel-tablet-main: 448fr;
+
+$carousel-mobile-side: 56px;
+$carousel-mobile-main: 218px;
+
+$carousel-desktop-track-height: 388px;
+$carousel-desktop-card-height: 384px;
+
+$carousel-tablet-track-height: 288px;
+$carousel-tablet-card-height: 280px;
+
+$carousel-mobile-track-height: 206px;
+$carousel-mobile-card-height: 200px;
+
+$carousel-accent-border-width: 1.5px;
+
+$carousel-mobile-track-extra-width: 6px;
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  gap: tokens.$size-5;
+
+  padding: tokens.$size-5 tokens.$size-15;
+
+  background-color: tokens.$bg;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+  }
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    gap: tokens.$size-1;
+
+    min-width: 0;
+  }
+
+  &__accent {
+    width: tokens.$size-1;
+    height: tokens.$size-4;
+
+    flex-shrink: 0;
+
+    background-color: tokens.$primary;
+    border: $carousel-accent-border-width solid tokens.$on-primary;
+    border-radius: tokens.$corner-extra-small;
+  }
+
+  &__title {
+    margin: 0;
+
+    color: tokens.$on-primary;
+
+    font-size: tokens.$headline-large;
+    font-weight: tokens.$bold;
+    line-height: normal;
+
+    white-space: nowrap;
+  }
+
+  &__navigation {
+    display: flex;
+    gap: tokens.$size-2;
+
+    flex-shrink: 0;
+  }
+
+  &__navigation-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: tokens.$size-6;
+    height: tokens.$size-6;
+    padding: 0;
+
+    border: tokens.$border-width-medium solid tokens.$on-primary;
+    border-radius: tokens.$corner-full;
+
+    cursor: pointer;
+
+    &--previous {
+      background-color: tokens.$white;
+
+      &:hover {
+        background-color: tokens.$surface;
+      }
+    }
+
+    &--next {
+      background-color: tokens.$primary;
+
+      &:hover {
+        background-color: tokens.$primary-high;
+      }
+    }
+  }
+
+  &__navigation-icon {
+    display: block;
+
+    width: tokens.$size-2;
+    height: tokens.$size-2;
+
+    flex-shrink: 0;
+  }
+
+  &__track {
+    display: grid;
+
+    grid-template-columns:
+      $carousel-desktop-side
+      $carousel-desktop-medium
+      $carousel-desktop-main
+      $carousel-desktop-medium
+      $carousel-desktop-side;
+
+    gap: tokens.$size-1;
+
+    width: 100%;
+    height: $carousel-desktop-track-height;
+    padding-inline: tokens.$size-1;
+
+    overflow: hidden;
+  }
+
+  .game-card {
+    min-width: 0;
+    height: $carousel-desktop-card-height;
+  }
+
+  @include mixins.compact-desktop {
+    gap: tokens.$size-3;
+
+    padding: tokens.$size-3 tokens.$size-5;
+
+    &__accent {
+      height: tokens.$size-3;
+    }
+
+    &__title {
+      font-size: tokens.$headline-medium;
+    }
+
+    &__navigation-button {
+      width: tokens.$size-5;
+      height: tokens.$size-5;
+    }
+  }
+
+  @include mixins.tablet {
+    &__track {
+      grid-template-columns:
+        $carousel-tablet-side
+        $carousel-tablet-main
+        $carousel-tablet-side;
+
+      height: $carousel-tablet-track-height;
+    }
+
+    .game-card {
+      height: $carousel-tablet-card-height;
+    }
+
+    .game-card:nth-child(1),
+    .game-card:nth-child(5) {
+      display: none;
+    }
+  }
+
+  @include mixins.mobile {
+    gap: tokens.$size-2;
+
+    padding: tokens.$size-2;
+
+    &__navigation {
+      display: none;
+    }
+
+    &__track {
+      grid-template-columns:
+        $carousel-mobile-side
+        $carousel-mobile-main
+        $carousel-mobile-side;
+
+      justify-content: space-between;
+
+      width: calc(100% + $carousel-mobile-track-extra-width);
+      height: $carousel-mobile-track-height;
+
+      gap: 0;
+      padding-inline: tokens.$size-05;
+    }
+
+    .game-card {
+      height: $carousel-mobile-card-height;
+    }
+  }
+}
