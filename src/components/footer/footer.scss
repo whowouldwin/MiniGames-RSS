@@ -1,0 +1,174 @@
+@use "../../styles/tokens";
+@use "../../styles/mixins";
+
+$brand-width: 400px;
+$copy-leading: 1.5;
+$divider-width: 1px;
+
+.footer {
+  padding: tokens.$size-5 tokens.$size-15;
+  background: tokens.$bg-footer;
+  color: tokens.$on-bg-footer;
+  font-size: tokens.$body-small;
+  p,
+  h2,
+  ul {
+    margin: 0;
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    gap: tokens.$size-5;
+  }
+  &__brand {
+    display: flex;
+    flex-direction: column;
+    gap: tokens.$size-3;
+    max-width: $brand-width;
+    p {
+      line-height: $copy-leading;
+    }
+  }
+  .site-logo {
+    color: tokens.$white;
+  }
+  &__links {
+    display: flex;
+    gap: tokens.$size-10;
+  }
+  h2 {
+    color: tokens.$white;
+    font-size: tokens.$body-medium;
+    margin-bottom: tokens.$size-2;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: tokens.$size-2;
+    padding: 0;
+    list-style: none;
+  }
+  &__social {
+    display: flex;
+    gap: tokens.$size-2;
+    a {
+      display: grid;
+      place-items: center;
+      width: tokens.$size-5;
+      height: tokens.$size-5;
+      border-radius: tokens.$corner-full;
+      background: tokens.$bg-footer-low;
+    }
+    img {
+      width: tokens.$headline-small;
+      height: tokens.$headline-small;
+      object-fit: contain;
+    }
+  }
+  &__bottom {
+    margin-top: tokens.$size-8;
+    padding-top: tokens.$size-3;
+    border-top: $divider-width solid tokens.$bg-footer-lowest;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: tokens.$size-2;
+  }
+  &__credit {
+    display: inline-flex;
+    align-items: center;
+    gap: tokens.$size-1;
+    white-space: nowrap;
+  }
+  &__rs,
+  &__code {
+    display: grid;
+    place-items: center;
+    width: tokens.$size-3;
+    height: tokens.$size-3;
+    border-radius: tokens.$corner-full;
+  }
+  &__rs {
+    color: tokens.$primary;
+    background: tokens.$on-primary;
+    font-size: tokens.$label-small;
+    font-weight: tokens.$bold;
+  }
+  &__code {
+    background: tokens.$white;
+    img {
+      width: tokens.$size-2;
+      height: tokens.$size-2;
+      object-fit: contain;
+    }
+  }
+  @media (hover: hover) {
+    a:hover {
+      color: tokens.$primary;
+    }
+    &__social a:hover {
+      background: tokens.$bg-footer-lowest;
+    }
+  }
+  a:active {
+    opacity: 0.7;
+  }
+  @include mixins.compact-desktop {
+    padding: tokens.$size-5;
+    &__top {
+      flex-direction: column;
+      gap: tokens.$size-3;
+    }
+    &__brand {
+      max-width: none;
+    }
+    .site-logo__text {
+      font-size: tokens.$headline-small;
+    }
+    &__links {
+      gap: tokens.$size-5;
+    }
+    &__bottom {
+      margin-top: tokens.$size-5;
+      font-size: tokens.$label-medium;
+    }
+    &__social a {
+      width: tokens.$size-4;
+      height: tokens.$size-4;
+    }
+    &__social img {
+      width: tokens.$size-2;
+      height: tokens.$size-2;
+    }
+    &__rs,
+    &__code {
+      width: tokens.$headline-small;
+      height: tokens.$headline-small;
+    }
+  }
+  @media (max-width: tokens.$breakpoint-tablet - tokens.$size-15) {
+    padding: tokens.$size-4 tokens.$size-2;
+    &__links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: tokens.$size-3 tokens.$size-5;
+    }
+    &__community {
+      grid-column: 1 / -1;
+    }
+    &__bottom {
+      margin-top: tokens.$size-3;
+      padding-top: tokens.$size-1;
+      display: grid;
+      grid-template-columns: max-content max-content;
+      justify-content: start;
+      gap: tokens.$size-1 tokens.$size-2;
+    }
+    &__copyright {
+      grid-column: 1 / -1;
+    }
+    &__love {
+      display: none;
+    }
+  }
+}
