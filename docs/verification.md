@@ -2,7 +2,7 @@
 
 Target deployment verified on 20 September 2026 with Node.js 24.19.0 and Google Chrome 153.0.8010.48.
 
-This prepared implementation was transferred into MiniGames-RSS. The published [target application](https://whowouldwin.github.io/MiniGames-RSS/) was freshly checked on 20 September 2026 after [successful deployment](https://github.com/whowouldwin/MiniGames-RSS/actions/runs/35509770662). Screenshots below were captured from that target deployment. The application source tree is unchanged from the completed source implementation; deployment paths and repository links were adapted.
+This prepared implementation was transferred into minigames. The published [target application](https://whowouldwin.github.io/minigames/) was freshly checked on 20 September 2026 after [successful deployment](https://github.com/whowouldwin/minigames/actions/runs/35509770662). Screenshots below were captured from that target deployment. The application source tree is unchanged from the completed source implementation; deployment paths and repository links were adapted.
 
 ## Acceptance matrix
 

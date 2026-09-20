@@ -16,16 +16,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/whowouldwin/MiniGames-RSS.git"
+    "url": "git+https://github.com/whowouldwin/minigames.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/whowouldwin/MiniGames-RSS/issues"
+    "url": "https://github.com/whowouldwin/minigames/issues"
   },
-  "homepage": "https://github.com/whowouldwin/MiniGames-RSS#readme",
+  "homepage": "https://github.com/whowouldwin/minigames#readme",
   "devDependencies": {
     "@commitlint/cli": "^21.2.2",
     "@commitlint/config-conventional": "^21.2.2",
