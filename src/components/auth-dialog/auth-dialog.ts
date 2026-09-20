@@ -59,7 +59,7 @@ export const createAuthDialog = (): AuthDialog => {
       event.preventDefault();
       let next: AuthMode = activeMode === "login" ? "register" : "login";
       if (event.key === "Home") next = "login";
-      if (event.key === "End") next = "register";
+      else if (event.key === "End") next = "register";
       setMode(next);
       tabs
         .querySelector<HTMLButtonElement>(`[data-mode="${CSS.escape(next)}"]`)
