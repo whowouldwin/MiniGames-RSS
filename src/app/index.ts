@@ -4,6 +4,8 @@ import { createCarousel } from "../components/carousel";
 
 import { createLeaderboard } from "../components/leaderboard";
 
+import { createGameDev } from "../components/game-dev";
+
 export const createApp = (): HTMLDivElement => {
   const app: HTMLDivElement = document.createElement("div");
 
@@ -13,6 +15,7 @@ export const createApp = (): HTMLDivElement => {
     createHero(),
     createCarousel(),
     createLeaderboard(),
+    createGameDev(),
   );
   return app;
 };
