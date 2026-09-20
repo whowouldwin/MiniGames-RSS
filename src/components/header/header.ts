@@ -4,9 +4,13 @@ import { createMenuToggle } from "../ui/menu-toggle";
 import { createSiteLogo } from "../ui/site-logo";
 import { createMobileMenu, setupMobileMenu } from "../mobile-menu";
 
+import type { AuthMode } from "../auth-dialog";
+
 import "./header.scss";
 
-export const createHeader = (): HTMLElement => {
+export const createHeader = (
+  openAuth: (mode: AuthMode) => void,
+): HTMLElement => {
   const header: HTMLElement = document.createElement("header");
 
   header.className = "header";
@@ -23,6 +27,12 @@ export const createHeader = (): HTMLElement => {
   loginButton.classList.add("header__login-button");
   signupButton.classList.add("header__signup-button");
 
+  loginButton.addEventListener("click", (): void => {
+    openAuth("login");
+  });
+  signupButton.addEventListener("click", (): void => {
+    openAuth("register");
+  });
   buttons.append(loginButton, signupButton);
 
   const menuToggle: HTMLButtonElement = createMenuToggle();
@@ -31,7 +41,7 @@ export const createHeader = (): HTMLElement => {
 
   const mobileMenu: HTMLElement = createMobileMenu();
 
-  setupMobileMenu(menuToggle, mobileMenu);
+  setupMobileMenu(menuToggle, mobileMenu, openAuth);
 
   header.append(createSiteLogo(), actions, mobileMenu);
 

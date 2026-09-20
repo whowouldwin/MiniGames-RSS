@@ -16,7 +16,12 @@ export const createMobileMenu = (): HTMLElement => {
   const logo: HTMLAnchorElement = createSiteLogo();
   logo.classList.add("mobile-menu__logo");
 
-  top.append(logo);
+  const closeButton: HTMLButtonElement = document.createElement("button");
+  closeButton.type = "button";
+  closeButton.className = "mobile-menu__close";
+  closeButton.setAttribute("aria-label", "Close menu");
+  closeButton.textContent = "×";
+  top.append(logo, closeButton);
 
   const navigation: HTMLElement = document.createElement("nav");
 
