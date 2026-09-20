@@ -1,5 +1,6 @@
 import { createNavigationList } from "../navigation/create-navigation-list";
 import { createButton } from "../ui/button";
+import { createMenuToggle } from "../ui/menu-toggle";
 import { createSiteLogo } from "../ui/site-logo";
 
 import "./mobile-menu.scss";
@@ -16,11 +17,10 @@ export const createMobileMenu = (): HTMLElement => {
   const logo: HTMLAnchorElement = createSiteLogo();
   logo.classList.add("mobile-menu__logo");
 
-  const closeButton: HTMLButtonElement = document.createElement("button");
-  closeButton.type = "button";
-  closeButton.className = "mobile-menu__close";
+  const closeButton: HTMLButtonElement = createMenuToggle();
+  closeButton.classList.add("mobile-menu__close");
   closeButton.setAttribute("aria-label", "Close menu");
-  closeButton.textContent = "×";
+  closeButton.removeAttribute("aria-expanded");
   top.append(logo, closeButton);
 
   const navigation: HTMLElement = document.createElement("nav");

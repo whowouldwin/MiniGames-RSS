@@ -44,6 +44,30 @@
       background-color tokens.$transition-duration-medium ease;
   }
 
+  &--open {
+    background-color: tokens.$bg-footer-low;
+
+    &::before {
+      opacity: 0;
+    }
+
+    .menu-toggle__line {
+      background-color: tokens.$white;
+
+      &:nth-child(1) {
+        transform: translateY(tokens.$size-05) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: translateY(calc(-1 * tokens.$size-05)) rotate(-45deg);
+      }
+    }
+  }
+
   @include mixins.tablet {
     display: flex;
   }
@@ -52,5 +76,11 @@
     &__line {
       width: tokens.$menu-line-mobile-width;
     }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-toggle__line {
+    transition: none;
   }
 }

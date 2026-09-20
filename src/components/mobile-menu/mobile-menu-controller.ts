@@ -13,6 +13,8 @@ export const setupMobileMenu = (
   );
   const setOpen = (isOpen: boolean): void => {
     mobileMenu.classList.toggle("mobile-menu--open", isOpen);
+    menuToggle.classList.toggle("menu-toggle--open", isOpen);
+    closeButton?.classList.toggle("menu-toggle--open", isOpen);
     mobileMenu.inert = !isOpen;
     mobileMenu.setAttribute("aria-hidden", String(!isOpen));
     menuToggle.setAttribute("aria-expanded", String(isOpen));
