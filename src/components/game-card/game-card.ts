@@ -37,6 +37,10 @@ export const createGameCard = (game: GameCardData): HTMLElement => {
   image.src = game.image;
   image.alt = game.title;
 
+  const shade: HTMLDivElement = document.createElement("div");
+  shade.className = "game-card__shade";
+  shade.setAttribute("aria-hidden", "true");
+
   const overlay: HTMLDivElement = document.createElement("div");
   overlay.className = "game-card__overlay";
 
@@ -53,7 +57,7 @@ export const createGameCard = (game: GameCardData): HTMLElement => {
   stats.append(rating, likes);
   overlay.append(title, stats);
 
-  card.append(image, overlay);
+  card.append(image, shade, overlay);
 
   return card;
 };
