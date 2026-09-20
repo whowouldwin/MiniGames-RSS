@@ -1,6 +1,8 @@
 # Story 1 verification
 
-Verified on 20 September 2026 with Node.js 24.19.0 and Google Chrome 153.0.8010.48.
+Source implementation verified on 20 September 2026 with Node.js 24.19.0 and Google Chrome 153.0.8010.48.
+
+This prepared implementation was transferred into MiniGames-RSS. The results below initially describe source verification; fresh target deployment verification will be recorded after publication.
 
 ## Acceptance matrix
 
