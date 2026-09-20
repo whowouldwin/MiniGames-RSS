@@ -32,3 +32,8 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+:focus-visible {
+  outline: tokens.$border-width-medium solid tokens.$tertiary;
+  outline-offset: tokens.$size-05;
+}

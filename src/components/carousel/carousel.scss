@@ -96,16 +96,20 @@ $carousel-mobile-track-extra-width: 6px;
     &--previous {
       background-color: tokens.$white;
 
-      &:hover {
-        background-color: tokens.$surface;
+      @media (hover: hover) {
+        &:hover {
+          background-color: tokens.$surface;
+        }
       }
     }
 
     &--next {
       background-color: tokens.$primary;
 
-      &:hover {
-        background-color: tokens.$primary-high;
+      @media (hover: hover) {
+        &:hover {
+          background-color: tokens.$primary-high;
+        }
       }
     }
   }

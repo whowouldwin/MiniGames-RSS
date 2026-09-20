@@ -34,16 +34,28 @@
   &--outlined {
     background-color: transparent;
 
-    &:hover {
-      background-color: tokens.$surface;
+    @media (hover: hover) {
+      &:hover {
+        background-color: tokens.$surface;
+      }
     }
   }
 
   &--filled {
     background-color: tokens.$primary;
 
-    &:hover {
-      background-color: tokens.$primary-high;
+    @media (hover: hover) {
+      &:hover {
+        background-color: tokens.$primary-high;
+      }
     }
   }
+}
+
+.button:active:not(:disabled) {
+  background-color: tokens.$primary-low;
+}
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
