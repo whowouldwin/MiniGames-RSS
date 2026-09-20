@@ -268,10 +268,9 @@ $mobile-streak-width: 70px;
   }
   @media (max-width: tokens.$breakpoint-tablet - tokens.$size-15) {
     tr {
-      grid-template-columns: tokens.$size-5 minmax(
-          0,
-          1fr
-        ) tokens.$size-10 $mobile-streak-width;
+      grid-template-columns:
+        tokens.$size-5 minmax(0, 1fr)
+        tokens.$size-10 $mobile-streak-width;
       gap: tokens.$size-1;
     }
     thead tr {
