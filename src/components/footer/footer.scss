@@ -3,6 +3,7 @@
 
 $brand-width: 400px;
 $copy-leading: 1.5;
+$label-leading: 1.2;
 $divider-width: 1px;
 
 .footer {
@@ -10,6 +11,7 @@ $divider-width: 1px;
   background: tokens.$bg-footer;
   color: tokens.$on-bg-footer;
   font-size: tokens.$body-small;
+  line-height: $label-leading;
   p,
   h2,
   ul {
@@ -131,7 +133,8 @@ $divider-width: 1px;
     &__bottom {
       gap: tokens.$size-1;
       margin-top: tokens.$size-5;
-      font-size: tokens.$label-medium;
+      padding-top: tokens.$size-2;
+      font-size: tokens.$body-small;
     }
     &__social a {
       width: tokens.$size-4;
