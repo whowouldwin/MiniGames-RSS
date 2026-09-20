@@ -74,3 +74,9 @@ Source Figma overlays were reviewed at 375, 768 and 1920px. Fresh target screens
 - No backend, actual authentication, Google sign-in, password recovery or form validation is implemented in this stage. Forms do not submit or reload the page.
 - All navigation/social links lead to Home. The footer credits use the repository owner's actual GitHub handle.
 - The final `story-1` → `main` PR must remain open and unmerged. Submit that PR URL to RS App manually.
+
+## Carousel shading and menu stacking follow-up
+
+Verified locally on 20 September 2026. Card stacking is isolated so captions and decorative shading stay behind the mobile menu. The gradient now uses the Figma stops (40% opacity at 17.308%, 85% at 46.154%). Narrow cards have a separate 56px decorative gradient above the 375px mobile breakpoint; title, rating and likes remain hidden below 288px card width. At the mobile breakpoint the decorative gradient is hidden. This follows the supplied artwork for decorative shading; the written “image only / no info overlay” criterion can be interpreted more strictly.
+
+Validation: TypeScript, ESLint, Prettier and production build passed. Chrome checks passed at 18 viewport widths (375–2560px), with eight auth cases and no JavaScript/console errors or horizontal overflow. Menu stacking was checked at 375, 647, 648, 725, 767 and 768px; menu slide/close/Escape and focus restoration passed. Updated Home screenshots in `docs/review` show the current locally verified result.

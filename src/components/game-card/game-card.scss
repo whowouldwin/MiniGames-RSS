@@ -1,4 +1,5 @@
 @use "../../styles/tokens";
+@use "../../styles/mixins";
 
 $game-card-info-threshold: 288px;
 $game-card-border-width: 2.5px;
@@ -12,10 +13,21 @@ $game-card-overlay-gap: tokens.$size-1;
 $game-card-title-line-height: 1.2;
 $game-card-stat-line-height: 1;
 
+$game-card-overlay-middle-stop: 17.308%;
+$game-card-overlay-dark-stop: 46.154%;
+
+$game-card-overlay-gradient: linear-gradient(
+  to bottom,
+  transparent,
+  rgba(tokens.$black, 0.4) $game-card-overlay-middle-stop,
+  rgba(tokens.$black, 0.85) $game-card-overlay-dark-stop
+);
+
 .game-card {
   container-type: inline-size;
 
   position: relative;
+  isolation: isolate;
 
   height: 100%;
   overflow: hidden;
@@ -34,6 +46,20 @@ $game-card-stat-line-height: 1;
     object-fit: cover;
   }
 
+  &__shade {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: tokens.$size-7;
+    pointer-events: none;
+    background: $game-card-overlay-gradient;
+
+    @include mixins.mobile {
+      display: none;
+    }
+  }
+
   &__overlay {
     position: absolute;
     right: 0;
@@ -48,11 +74,7 @@ $game-card-stat-line-height: 1;
     padding: tokens.$size-2;
 
     color: tokens.$white;
-    background: linear-gradient(
-      to bottom,
-      transparent,
-      rgba(tokens.$black, 0.85)
-    );
+    background: $game-card-overlay-gradient;
   }
 
   &__title {
@@ -106,6 +128,10 @@ $game-card-stat-line-height: 1;
 }
 
 @container (min-width: #{$game-card-content-info-threshold}) {
+  .game-card__shade {
+    display: none;
+  }
+
   .game-card__overlay {
     display: flex;
   }
