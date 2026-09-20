@@ -3,7 +3,7 @@ import uploadIcon from "../../assets/icons/upload.svg";
 import { createButton } from "../ui/button";
 import "./game-dev.scss";
 
-export const createGameDev = (): HTMLElement => {
+export const createGameDevelopment = (): HTMLElement => {
   const section: HTMLElement = document.createElement("section");
   section.className = "game-dev";
   section.setAttribute("aria-labelledby", "game-dev-title");
