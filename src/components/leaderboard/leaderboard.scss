@@ -33,6 +33,15 @@ $mobile-score-width: 72px;
     white-space: pre;
   }
   &__frame {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border: $border solid tokens.$on-primary;
+      border-radius: inherit;
+      pointer-events: none;
+    }
     overflow: hidden;
     border-radius: tokens.$corner-large;
     box-shadow:
@@ -58,7 +67,7 @@ $mobile-score-width: 72px;
   }
   td {
     height: tokens.$size-9;
-    padding: tokens.$size-2 tokens.$size-1;
+    padding: calc(tokens.$size-2 - $thin-border) tokens.$size-1;
     text-align: center;
     border-bottom: $thin-border solid tokens.$outline;
   }
@@ -150,11 +159,11 @@ $mobile-score-width: 72px;
       padding-block: tokens.$size-2;
     }
     td {
-      height: tokens.$size-8;
+      height: tokens.$size-8 - tokens.$size-05;
     }
     &__avatar {
-      width: tokens.$size-4;
-      height: tokens.$size-4;
+      width: tokens.$size-4 - tokens.$size-05;
+      height: tokens.$size-4 - tokens.$size-05;
       font-size: tokens.$label-medium;
     }
     th:nth-child(2) {
@@ -166,6 +175,9 @@ $mobile-score-width: 72px;
   }
   @media (max-width: tokens.$breakpoint-tablet - tokens.$size-15) {
     padding: tokens.$size-2;
+    &__title {
+      margin-bottom: tokens.$size-2;
+    }
     &__title-extra,
     &__games,
     &__full-score {
@@ -187,7 +199,7 @@ $mobile-score-width: 72px;
     }
     td {
       height: tokens.$size-7;
-      padding: tokens.$size-2 tokens.$size-05;
+      padding: calc(tokens.$size-2 - $thin-border) tokens.$size-05;
     }
     &__player {
       gap: tokens.$size-05;

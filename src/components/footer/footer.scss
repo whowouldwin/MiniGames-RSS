@@ -129,6 +129,7 @@ $divider-width: 1px;
       gap: tokens.$size-5;
     }
     &__bottom {
+      gap: tokens.$size-1;
       margin-top: tokens.$size-5;
       font-size: tokens.$label-medium;
     }
