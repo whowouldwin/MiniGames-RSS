@@ -106,8 +106,7 @@
 
 .mobile-menu {
   &__close {
-    display: grid;
-    place-items: center;
+    display: flex;
     width: tokens.$size-4;
     height: tokens.$size-4;
     padding: 0;
@@ -115,17 +114,12 @@
     border-radius: tokens.$corner-small;
     background: tokens.$bg-footer-low;
     color: tokens.$white;
-    font-size: tokens.$headline-medium;
     cursor: pointer;
   }
   @include mixins.tablet {
     height: 100dvh;
     min-height: 0;
     overflow-y: auto;
-    transform: translateY(calc(-1 * tokens.$size-3));
-    &--open {
-      transform: translateY(0);
-    }
   }
 }
 @media (prefers-reduced-motion: reduce) {
