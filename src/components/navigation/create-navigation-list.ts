@@ -17,6 +17,7 @@ export const createNavigationList = (
     link.className = `${blockName}__link`;
     link.href = href;
     link.textContent = label;
+    link.dataset.navigationBlock = blockName;
     if (page) link.dataset.page = page;
 
     if (page === activePage) {
@@ -44,16 +45,7 @@ export const updateNavigationState = (
   activePage: AppPage,
 ): void => {
   for (const link of root.querySelectorAll<HTMLAnchorElement>("a[data-page]")) {
-    const navigation: HTMLElement | null = link.closest(
-      ".main-navigation, .mobile-menu",
-    );
-    const blockName: string | undefined = navigation?.classList.contains(
-      "mobile-menu",
-    )
-      ? "mobile-menu"
-      : navigation?.classList.contains("main-navigation")
-        ? "main-navigation"
-        : undefined;
+    const blockName: string | undefined = link.dataset.navigationBlock;
 
     if (!blockName) continue;
 

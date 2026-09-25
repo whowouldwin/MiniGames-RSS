@@ -21,6 +21,45 @@ export const setupMobileMenu = (
     if (isOpen) closeButton?.focus();
     else menuToggle.focus();
   };
+  const closeAndScrollToTop = (): void => {
+    setOpen(false);
+    globalThis.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  const openAuthFromMenu = (mode: AuthMode): void => {
+    setOpen(false);
+    openAuth(mode);
+  };
+  const handleKeydown = (event: KeyboardEvent): void => {
+    if (!mobileMenu.classList.contains("mobile-menu--open")) return;
+    if (event.key === "Escape") {
+      setOpen(false);
+      return;
+    }
+    if (event.key !== "Tab") return;
+
+    const focusable: HTMLElement[] = [
+      ...mobileMenu.querySelectorAll<HTMLElement>("a, button"),
+    ];
+    const first: HTMLElement | undefined = focusable[0];
+    const last: HTMLElement | undefined = focusable.at(-1);
+
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last?.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first?.focus();
+    }
+  };
+  const closeWhenMenuToggleIsHidden = (): void => {
+    const isMenuOpen: boolean =
+      mobileMenu.classList.contains("mobile-menu--open");
+    const isMenuToggleHidden: boolean =
+      getComputedStyle(menuToggle).display === "none";
+
+    if (isMenuOpen && isMenuToggleHidden) setOpen(false);
+  };
+
   menuToggle.addEventListener("click", (): void => {
     setOpen(true);
   });
@@ -30,55 +69,25 @@ export const setupMobileMenu = (
   for (const link of mobileMenu.querySelectorAll<HTMLAnchorElement>(
     "a[data-page]",
   )) {
-    link.addEventListener("click", (): void => {
-      setOpen(false);
-      globalThis.scrollTo({ top: 0, behavior: "smooth" });
-    });
+    link.addEventListener("click", closeAndScrollToTop);
   }
   mobileMenu
     .querySelector(".mobile-menu__logo")
-    ?.addEventListener("click", (): void => {
-      setOpen(false);
-      globalThis.scrollTo({ top: 0, behavior: "smooth" });
-    });
+    ?.addEventListener("click", closeAndScrollToTop);
   mobileMenu
     .querySelector(".mobile-menu__login-button")
     ?.addEventListener("click", (): void => {
-      setOpen(false);
-      openAuth("login");
+      openAuthFromMenu("login");
     });
   mobileMenu
     .querySelector(".mobile-menu__signup-button")
     ?.addEventListener("click", (): void => {
-      setOpen(false);
-      openAuth("register");
+      openAuthFromMenu("register");
     });
-  document.addEventListener("keydown", (event: KeyboardEvent): void => {
-    if (!mobileMenu.classList.contains("mobile-menu--open")) return;
-    if (event.key === "Escape") {
-      setOpen(false);
-      return;
-    }
-    if (event.key !== "Tab") return;
-    const focusable: HTMLElement[] = [
-      ...mobileMenu.querySelectorAll<HTMLElement>("a, button"),
-    ];
-    const first: HTMLElement | undefined = focusable[0];
-    const last: HTMLElement | undefined = focusable.at(-1);
-    if (event.shiftKey && document.activeElement === first) {
-      event.preventDefault();
-      last?.focus();
-    } else if (!event.shiftKey && document.activeElement === last) {
-      event.preventDefault();
-      first?.focus();
-    }
-  });
-  const resizeObserver: ResizeObserver = new ResizeObserver((): void => {
-    if (
-      getComputedStyle(menuToggle).display === "none" &&
-      mobileMenu.classList.contains("mobile-menu--open")
-    )
-      setOpen(false);
-  });
+  document.addEventListener("keydown", handleKeydown);
+
+  const resizeObserver: ResizeObserver = new ResizeObserver(
+    closeWhenMenuToggleIsHidden,
+  );
   resizeObserver.observe(menuToggle);
 };
