@@ -67,7 +67,7 @@ export const setupMobileMenu = (
     setOpen(false);
   });
   for (const link of mobileMenu.querySelectorAll<HTMLAnchorElement>(
-    "a[data-page]",
+    ":scope .mobile-menu__navigation a",
   )) {
     link.addEventListener("click", closeAndScrollToTop);
   }
