@@ -6,35 +6,37 @@ export interface NavigationItem {
   page: AppPage;
 }
 
-const homeItem: NavigationItem = {
-  label: "Home",
-  href: "./",
-  page: "home",
+const pageHrefs: Record<AppPage, string> = {
+  home: "./",
+  library: "./library",
 };
 
-const libraryItem: NavigationItem = {
-  label: "Library",
-  href: "./library",
-  page: "library",
-};
-
-const createHomeItem = (label: string): NavigationItem => ({
-  ...homeItem,
+const createNavigationItem = (
+  label: string,
+  page: AppPage,
+): NavigationItem => ({
   label,
+  href: pageHrefs[page],
+  page,
 });
 
-const tournamentsItem: NavigationItem = createHomeItem("Tournaments");
+const homeItem: NavigationItem = createNavigationItem("Home", "home");
+const libraryItem: NavigationItem = createNavigationItem("Library", "library");
+const tournamentsItem: NavigationItem = createNavigationItem(
+  "Tournaments",
+  "home",
+);
 
 export const navigationItems: readonly NavigationItem[] = [
   homeItem,
   libraryItem,
   tournamentsItem,
-  createHomeItem("Community"),
+  createNavigationItem("Community", "home"),
 ];
 
 export const footerNavigationItems: readonly NavigationItem[] = [
   homeItem,
   libraryItem,
-  createHomeItem("Categories"),
+  createNavigationItem("Categories", "home"),
   tournamentsItem,
 ];
