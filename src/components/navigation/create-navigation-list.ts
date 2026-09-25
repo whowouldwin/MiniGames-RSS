@@ -26,7 +26,7 @@ export const createNavigationList = (
       link.setAttribute("aria-current", "page");
     }
 
-    setupPageNavigation(link, page ?? "home", navigateTo);
+    setupPageNavigation(link, page, navigateTo);
 
     item.append(link);
     list.append(item);
