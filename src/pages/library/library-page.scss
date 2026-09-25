@@ -1,0 +1,32 @@
+@use "../../styles/mixins";
+@use "../../styles/tokens";
+
+.library-page {
+  &__intro {
+    @include mixins.responsive-inline-padding(tokens.$size-15);
+
+    display: flex;
+    flex-direction: column;
+    gap: tokens.$size-1;
+
+    padding-block: tokens.$size-5;
+  }
+
+  h1,
+  p {
+    margin: 0;
+  }
+
+  h1 {
+    color: tokens.$on-primary;
+    font-size: tokens.$display-medium;
+    font-weight: tokens.$bold;
+    line-height: normal;
+  }
+
+  p {
+    color: tokens.$on-bg;
+    font-size: tokens.$body-medium;
+    line-height: normal;
+  }
+}

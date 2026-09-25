@@ -1,16 +1,21 @@
+import type { AppPage } from "../../app/app-page";
+
 export interface NavigationItem {
   label: string;
   href: string;
+  page?: AppPage;
 }
 
 export const navigationItems: readonly NavigationItem[] = [
   {
     label: "Home",
     href: "./",
+    page: "home",
   },
   {
     label: "Library",
-    href: "./",
+    href: "./library",
+    page: "library",
   },
   {
     label: "Tournaments",
