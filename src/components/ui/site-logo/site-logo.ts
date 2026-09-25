@@ -1,10 +1,23 @@
 import logoMarkUrl from "../../../assets/icons/logo-mark.png";
+import type { AppPage } from "../../../app/app-page";
 import "./site-logo.scss";
 
-export const createSiteLogo = (): HTMLAnchorElement => {
+export const createSiteLogo = (
+  navigateTo?: (page: AppPage) => void,
+): HTMLAnchorElement => {
   const link: HTMLAnchorElement = document.createElement("a");
   link.className = "site-logo";
   link.href = "./";
+  if (navigateTo) {
+    link.addEventListener("click", (event: MouseEvent): void => {
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+        return;
+      }
+
+      event.preventDefault();
+      navigateTo("home");
+    });
+  }
 
   const icon: HTMLImageElement = document.createElement("img");
   icon.className = "site-logo__icon";

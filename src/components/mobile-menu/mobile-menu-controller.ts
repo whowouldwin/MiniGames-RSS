@@ -27,13 +27,20 @@ export const setupMobileMenu = (
   closeButton?.addEventListener("click", (): void => {
     setOpen(false);
   });
-  for (const link of mobileMenu.querySelectorAll<HTMLAnchorElement>("a")) {
-    link.addEventListener("click", (event: MouseEvent): void => {
-      event.preventDefault();
+  for (const link of mobileMenu.querySelectorAll<HTMLAnchorElement>(
+    "a[data-page]",
+  )) {
+    link.addEventListener("click", (): void => {
       setOpen(false);
       globalThis.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
+  mobileMenu
+    .querySelector(".mobile-menu__logo")
+    ?.addEventListener("click", (): void => {
+      setOpen(false);
+      globalThis.scrollTo({ top: 0, behavior: "smooth" });
+    });
   mobileMenu
     .querySelector(".mobile-menu__login-button")
     ?.addEventListener("click", (): void => {
