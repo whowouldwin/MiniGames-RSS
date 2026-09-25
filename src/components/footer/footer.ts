@@ -3,16 +3,32 @@ import shareIcon from "../../assets/icons/share.png";
 import chatIcon from "../../assets/icons/chat.png";
 import rssIcon from "../../assets/icons/rss.png";
 import codeIcon from "../../assets/icons/code.png";
+import type { AppPage } from "../../types/app-page";
+import { setupPageNavigation } from "../navigation/setup-page-navigation";
 import "./footer.scss";
 
-export const createFooter = (): HTMLElement => {
+const exploreItems: readonly { label: string; page: AppPage }[] = [
+  { label: "Home", page: "home" },
+  { label: "Library", page: "library" },
+  { label: "Categories", page: "home" },
+  { label: "Tournaments", page: "home" },
+];
+
+export const createFooter = (
+  navigateTo: (page: AppPage) => void,
+): HTMLElement => {
   const footer: HTMLElement = document.createElement("footer");
   footer.className = "footer";
   footer.innerHTML = `
     <div class="footer__top">
       <div class="footer__brand"><p>Take a short break and have fun. Hundreds of curated casual mini-games right in your web browser. No download required.</p></div>
       <div class="footer__links">
-        <nav aria-label="Explore"><h2>Explore</h2><ul>${["Home", "Library", "Categories", "Tournaments"].map((label: string): string => `<li><a href="./">${label}</a></li>`).join("")}</ul></nav>
+        <nav aria-label="Explore"><h2>Explore</h2><ul>${exploreItems
+          .map(
+            ({ label, page }): string =>
+              `<li><a href="${page === "library" ? "./library" : "./"}" data-page="${page}">${label}</a></li>`,
+          )
+          .join("")}</ul></nav>
         <nav aria-label="Company"><h2>Company</h2><ul>${["About Us", "Contact", "Privacy Policy", "Terms of Service"].map((label: string): string => `<li><a href="./">${label}</a></li>`).join("")}</ul></nav>
         <div class="footer__community"><h2>Community</h2><div class="footer__social">
           <a href="./" aria-label="Share"><img src="${shareIcon}" alt="" /></a>
@@ -28,5 +44,14 @@ export const createFooter = (): HTMLElement => {
       <p class="footer__love">Designed with love</p>
     </div>`;
   footer.querySelector(".footer__brand")?.prepend(createSiteLogo());
+
+  for (const link of footer.querySelectorAll<HTMLAnchorElement>(
+    ":scope .footer__brand a, :scope .footer__links a",
+  )) {
+    const page: AppPage = link.dataset.page === "library" ? "library" : "home";
+
+    setupPageNavigation(link, page, navigateTo);
+  }
+
   return footer;
 };
