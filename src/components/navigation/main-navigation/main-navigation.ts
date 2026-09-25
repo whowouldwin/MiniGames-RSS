@@ -1,4 +1,4 @@
-import type { AppPage } from "../../../app/app-page";
+import type { AppPage } from "../../../types/app-page";
 import { createNavigationList } from "../create-navigation-list";
 
 import "./main-navigation.scss";

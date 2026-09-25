@@ -2,9 +2,9 @@ import { createHeader } from "../components/header";
 import { createFooter } from "../components/footer";
 import { createAuthDialog } from "../components/auth-dialog";
 import { updateNavigationState } from "../components/navigation/create-navigation-list";
-import type { AppPage } from "./app-page";
 import { createHomePage } from "../pages/home";
 import { createLibraryPage } from "../pages/library";
+import type { AppPage } from "../types/app-page";
 
 const createPage = (page: AppPage): HTMLElement =>
   page === "home" ? createHomePage() : createLibraryPage();
