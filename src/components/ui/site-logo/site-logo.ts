@@ -1,5 +1,6 @@
 import logoMarkUrl from "../../../assets/icons/logo-mark.png";
 import type { AppPage } from "../../../types/app-page";
+import { setupPageNavigation } from "../../navigation/setup-page-navigation";
 import "./site-logo.scss";
 
 export const createSiteLogo = (
@@ -9,14 +10,7 @@ export const createSiteLogo = (
   link.className = "site-logo";
   link.href = "./";
   if (navigateTo) {
-    link.addEventListener("click", (event: MouseEvent): void => {
-      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
-        return;
-      }
-
-      event.preventDefault();
-      navigateTo("home");
-    });
+    setupPageNavigation(link, "home", navigateTo);
   }
 
   const icon: HTMLImageElement = document.createElement("img");

@@ -24,7 +24,7 @@ export const createApp = (): HTMLDivElement => {
   };
 
   const header: HTMLElement = createHeader(auth.open, "home", navigateTo);
-  app.append(header, pageOutlet, createFooter(), auth.element);
+  app.append(header, pageOutlet, createFooter(navigateTo), auth.element);
 
   return app;
 };
