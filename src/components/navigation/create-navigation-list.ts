@@ -1,4 +1,5 @@
 import type { AppPage } from "../../types/app-page";
+import { setupPageNavigation } from "./setup-page-navigation";
 import { navigationItems } from "./navigation-items";
 
 export const createNavigationList = (
@@ -25,13 +26,7 @@ export const createNavigationList = (
       link.setAttribute("aria-current", "page");
     }
 
-    link.addEventListener("click", (event: MouseEvent): void => {
-      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)
-        return;
-
-      event.preventDefault();
-      navigateTo(page ?? "home");
-    });
+    setupPageNavigation(link, page ?? "home", navigateTo);
 
     item.append(link);
     list.append(item);
