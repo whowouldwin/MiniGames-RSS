@@ -1,4 +1,4 @@
-import type { AppPage } from "../../app/app-page";
+import type { AppPage } from "../../types/app-page";
 import { createNavigationList } from "../navigation/create-navigation-list";
 import { createButton } from "../ui/button";
 import { createMenuToggle } from "../ui/menu-toggle";

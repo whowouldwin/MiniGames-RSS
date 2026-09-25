@@ -1,4 +1,4 @@
-import type { AppPage } from "../../app/app-page";
+import type { AppPage } from "../../types/app-page";
 import { navigationItems } from "./navigation-items";
 
 export const createNavigationList = (

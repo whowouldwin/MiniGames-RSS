@@ -1,5 +1,5 @@
 import logoMarkUrl from "../../../assets/icons/logo-mark.png";
-import type { AppPage } from "../../../app/app-page";
+import type { AppPage } from "../../../types/app-page";
 import "./site-logo.scss";
 
 export const createSiteLogo = (

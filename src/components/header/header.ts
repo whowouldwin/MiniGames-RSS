@@ -5,7 +5,7 @@ import { createSiteLogo } from "../ui/site-logo";
 import { createMobileMenu, setupMobileMenu } from "../mobile-menu";
 
 import type { AuthMode } from "../auth-dialog";
-import type { AppPage } from "../../app/app-page";
+import type { AppPage } from "../../types/app-page";
 
 import "./header.scss";
 
