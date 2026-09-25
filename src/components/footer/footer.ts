@@ -19,8 +19,8 @@ export const createFooter = (
       <div class="footer__links">
         <nav aria-label="Explore"><h2>Explore</h2><ul>${footerNavigationItems
           .map(
-            ({ label, href, page }): string =>
-              `<li><a href="${href}" data-page="${page}">${label}</a></li>`,
+            ({ label, href, targetPage }): string =>
+              `<li><a href="${href}" data-target-page="${targetPage}">${label}</a></li>`,
           )
           .join("")}</ul></nav>
         <nav aria-label="Company"><h2>Company</h2><ul>${["About Us", "Contact", "Privacy Policy", "Terms of Service"].map((label: string): string => `<li><a href="./">${label}</a></li>`).join("")}</ul></nav>
@@ -42,7 +42,8 @@ export const createFooter = (
   for (const link of footer.querySelectorAll<HTMLAnchorElement>(
     ":scope .footer__brand a, :scope .footer__links a",
   )) {
-    const page: AppPage = link.dataset.page === "library" ? "library" : "home";
+    const page: AppPage =
+      link.dataset.targetPage === "library" ? "library" : "home";
 
     setupPageNavigation(link, page, navigateTo);
   }

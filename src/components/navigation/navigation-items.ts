@@ -3,7 +3,8 @@ import type { AppPage } from "../../types/app-page";
 export interface NavigationItem {
   label: string;
   href: string;
-  page: AppPage;
+  targetPage: AppPage;
+  activePage?: AppPage;
 }
 
 const pageHrefs: Record<AppPage, string> = {
@@ -13,15 +14,21 @@ const pageHrefs: Record<AppPage, string> = {
 
 const createNavigationItem = (
   label: string,
-  page: AppPage,
+  targetPage: AppPage,
+  activePage?: AppPage,
 ): NavigationItem => ({
   label,
-  href: pageHrefs[page],
-  page,
+  href: pageHrefs[targetPage],
+  targetPage,
+  ...(activePage && { activePage }),
 });
 
-const homeItem: NavigationItem = createNavigationItem("Home", "home");
-const libraryItem: NavigationItem = createNavigationItem("Library", "library");
+const homeItem: NavigationItem = createNavigationItem("Home", "home", "home");
+const libraryItem: NavigationItem = createNavigationItem(
+  "Library",
+  "library",
+  "library",
+);
 const tournamentsItem: NavigationItem = createNavigationItem(
   "Tournaments",
   "home",

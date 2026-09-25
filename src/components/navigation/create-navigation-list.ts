@@ -11,7 +11,12 @@ export const createNavigationList = (
 
   list.className = `${blockName}__list`;
 
-  for (const { label, href, page } of navigationItems) {
+  for (const {
+    label,
+    href,
+    targetPage,
+    activePage: navigationPage,
+  } of navigationItems) {
     const item: HTMLLIElement = document.createElement("li");
     const link: HTMLAnchorElement = document.createElement("a");
 
@@ -19,14 +24,14 @@ export const createNavigationList = (
     link.href = href;
     link.textContent = label;
     link.dataset.navigationBlock = blockName;
-    if (page) link.dataset.page = page;
+    if (navigationPage) link.dataset.page = navigationPage;
 
-    if (page === activePage) {
+    if (navigationPage === activePage) {
       link.classList.add(`${blockName}__link--active`);
       link.setAttribute("aria-current", "page");
     }
 
-    setupPageNavigation(link, page, navigateTo);
+    setupPageNavigation(link, targetPage, navigateTo);
 
     item.append(link);
     list.append(item);
