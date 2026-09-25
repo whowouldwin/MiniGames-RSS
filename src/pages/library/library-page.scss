@@ -2,6 +2,8 @@
 @use "../../styles/tokens";
 
 .library-page {
+  background-color: tokens.$bg;
+
   &__intro {
     @include mixins.responsive-inline-padding(tokens.$size-15);
 
@@ -19,14 +21,42 @@
 
   h1 {
     color: tokens.$on-primary;
-    font-size: tokens.$display-medium;
+    font-size: tokens.$display-large;
     font-weight: tokens.$bold;
-    line-height: normal;
+    line-height: 1.2;
   }
 
   p {
     color: tokens.$on-bg;
+    font-size: tokens.$body-large;
+    line-height: 1.2;
+  }
+}
+
+@include mixins.tablet {
+  .library-page__intro {
+    padding-block: tokens.$size-3;
+  }
+
+  .library-page h1 {
+    font-size: tokens.$display-medium;
+  }
+
+  .library-page p {
     font-size: tokens.$body-medium;
-    line-height: normal;
+  }
+}
+
+@include mixins.mobile {
+  .library-page__intro {
+    padding-block: tokens.$size-2;
+  }
+
+  .library-page h1 {
+    font-size: tokens.$display-small;
+  }
+
+  .library-page p {
+    font-size: tokens.$body-small;
   }
 }
