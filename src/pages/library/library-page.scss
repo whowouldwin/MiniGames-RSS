@@ -23,13 +23,13 @@
     color: tokens.$on-primary;
     font-size: tokens.$display-large;
     font-weight: tokens.$bold;
-    line-height: 1.2;
+    line-height: normal;
   }
 
   p {
     color: tokens.$on-bg;
     font-size: tokens.$body-large;
-    line-height: 1.2;
+    line-height: normal;
   }
 }
 

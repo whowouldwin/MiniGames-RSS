@@ -101,6 +101,17 @@ $btn-small-y: 8px;
 
 $btn-icon: 8px;
 
+// Library controls
+$filter-chip-height: 33px;
+$filter-chip-padding-inline: 14px;
+$sort-control-height: 44px;
+$sort-control-compact-height: 40px;
+$sort-control-desktop-width: 190px;
+$sort-control-tablet-width: 182px;
+$sort-chevron-size: 9px;
+$sort-chevron-offset-y: -5px;
+$library-controls-scroll-breakpoint: 1100px;
+
 // Shadow
 $level-1: 4px 4px 0 0 $on-primary;
 $level-2: 6px 6px 0 0 $on-primary;

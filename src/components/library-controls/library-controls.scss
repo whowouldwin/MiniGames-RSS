@@ -19,8 +19,8 @@
 
   &__filter {
     flex: 0 0 auto;
-    height: 33px;
-    padding: 0 14px;
+    height: tokens.$filter-chip-height;
+    padding: 0 tokens.$filter-chip-padding-inline;
     border: tokens.$border-width-medium solid tokens.$on-primary;
     border-radius: tokens.$corner-full;
     background: tokens.$white;
@@ -44,7 +44,7 @@
 
   &__sort {
     position: relative;
-    flex: 0 0 190px;
+    flex: 0 0 tokens.$sort-control-desktop-width;
     min-width: 0;
   }
 
@@ -52,7 +52,7 @@
     display: flex;
     width: 100%;
     min-width: 0;
-    height: 44px;
+    height: tokens.$sort-control-height;
     align-items: center;
     justify-content: space-between;
     gap: tokens.$size-1;
@@ -80,12 +80,12 @@
 
   &__sort-arrow {
     flex: 0 0 auto;
-    width: 9px;
-    height: 9px;
-    margin-top: -5px;
+    width: tokens.$sort-chevron-size;
+    height: tokens.$sort-chevron-size;
+    margin-top: tokens.$sort-chevron-offset-y;
     transform: rotate(45deg);
-    border-right: 2px solid currentColor;
-    border-bottom: 2px solid currentColor;
+    border-right: tokens.$border-width-medium solid currentColor;
+    border-bottom: tokens.$border-width-medium solid currentColor;
   }
 
   &__sort-options {
@@ -108,7 +108,7 @@
   }
 
   &__sort-option {
-    min-height: 40px;
+    min-height: tokens.$size-5;
     padding: tokens.$size-1 tokens.$size-2;
     border: 0;
     border-radius: tokens.$corner-small;
@@ -126,7 +126,7 @@
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: tokens.$library-controls-scroll-breakpoint) {
   .library-controls__filters {
     overflow-x: auto;
     touch-action: pan-x;
@@ -149,12 +149,12 @@
     }
 
     &__sort {
-      flex-basis: 40px;
-      width: 182px;
+      flex-basis: tokens.$sort-control-compact-height;
+      width: tokens.$sort-control-tablet-width;
     }
 
     &__sort-trigger {
-      height: 40px;
+      height: tokens.$sort-control-compact-height;
     }
   }
 }
@@ -168,7 +168,7 @@
     }
 
     &__filter {
-      height: 33px;
+      height: tokens.$filter-chip-height;
       padding-inline: tokens.$size-2;
       border-radius: tokens.$corner-large;
       font-size: tokens.$label-medium;
@@ -179,7 +179,7 @@
     }
 
     &__sort-trigger {
-      height: 40px;
+      height: tokens.$sort-control-compact-height;
     }
   }
 }
