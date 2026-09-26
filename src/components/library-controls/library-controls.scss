@@ -1,0 +1,185 @@
+@use "../../styles/mixins";
+@use "../../styles/tokens";
+
+.library-controls {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: tokens.$size-2;
+  padding: tokens.$size-2 tokens.$size-15;
+
+  &__filters {
+    display: flex;
+    flex: 0 1 auto;
+    gap: tokens.$size-2;
+    min-width: 0;
+  }
+
+  &__filter {
+    flex: 0 0 auto;
+    height: tokens.$filter-chip-height;
+    padding: 0 tokens.$filter-chip-padding-inline;
+    border: tokens.$border-width-medium solid tokens.$on-primary;
+    border-radius: tokens.$corner-full;
+    background: tokens.$white;
+    color: tokens.$on-primary;
+    cursor: pointer;
+    font-size: tokens.$label-large;
+    font-weight: tokens.$bold;
+    line-height: normal;
+    transition:
+      background-color tokens.$transition-duration-medium,
+      box-shadow tokens.$transition-duration-medium;
+
+    &:hover {
+      background: tokens.$surface;
+    }
+
+    &[aria-pressed="true"] {
+      background: tokens.$primary;
+    }
+  }
+
+  &__sort {
+    position: relative;
+    flex: 0 0 tokens.$sort-control-desktop-width;
+    min-width: 0;
+  }
+
+  &__sort-trigger {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    height: tokens.$sort-control-height;
+    align-items: center;
+    justify-content: space-between;
+    gap: tokens.$size-1;
+    padding: 0 tokens.$btn-medium-x;
+    border: tokens.$border-width-medium solid tokens.$on-primary;
+    border-radius: tokens.$corner-full;
+    background: tokens.$white;
+    color: tokens.$on-primary;
+    cursor: pointer;
+    font-size: tokens.$label-large;
+    font-weight: tokens.$bold;
+    text-align: left;
+
+    &:hover,
+    &[aria-expanded="true"] {
+      background: tokens.$surface;
+    }
+  }
+
+  &__sort-label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__sort-arrow {
+    flex: 0 0 auto;
+    width: tokens.$sort-chevron-size;
+    height: tokens.$sort-chevron-size;
+    margin-top: tokens.$sort-chevron-offset-y;
+    transform: rotate(45deg);
+    border-right: tokens.$border-width-medium solid currentColor;
+    border-bottom: tokens.$border-width-medium solid currentColor;
+  }
+
+  &__sort-options {
+    position: absolute;
+    z-index: 2;
+    top: calc(100% + #{tokens.$size-05});
+    right: 0;
+    left: 0;
+    display: grid;
+    gap: tokens.$size-05;
+    padding: tokens.$size-05;
+    border: tokens.$border-width-medium solid tokens.$on-primary;
+    border-radius: tokens.$corner-large;
+    background: tokens.$white;
+    box-shadow: tokens.$level-1;
+
+    &[hidden] {
+      display: none;
+    }
+  }
+
+  &__sort-option {
+    min-height: tokens.$size-5;
+    padding: tokens.$size-1 tokens.$size-2;
+    border: 0;
+    border-radius: tokens.$corner-small;
+    background: transparent;
+    color: tokens.$on-primary;
+    cursor: pointer;
+    font-size: tokens.$label-large;
+    font-weight: tokens.$medium;
+    text-align: left;
+
+    &:hover,
+    &[aria-selected="true"] {
+      background: tokens.$surface;
+    }
+  }
+}
+
+@media (max-width: tokens.$library-controls-scroll-breakpoint) {
+  .library-controls__filters {
+    overflow-x: auto;
+    touch-action: pan-x;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+@include mixins.tablet {
+  .library-controls {
+    flex-direction: column;
+    align-items: stretch;
+    padding-inline: tokens.$size-5;
+
+    &__filters {
+      overflow-x: auto;
+    }
+
+    &__sort {
+      flex-basis: tokens.$sort-control-compact-height;
+      width: tokens.$sort-control-tablet-width;
+    }
+
+    &__sort-trigger {
+      height: tokens.$sort-control-compact-height;
+    }
+  }
+}
+
+@include mixins.mobile {
+  .library-controls {
+    padding-inline: tokens.$size-2;
+
+    &__filters {
+      gap: tokens.$size-1;
+    }
+
+    &__filter {
+      height: tokens.$filter-chip-height;
+      padding-inline: tokens.$size-2;
+      border-radius: tokens.$corner-large;
+      font-size: tokens.$label-medium;
+    }
+
+    &__sort {
+      width: 100%;
+    }
+
+    &__sort-trigger {
+      height: tokens.$sort-control-compact-height;
+    }
+  }
+}
